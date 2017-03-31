@@ -1,420 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="王鹏的个人博客">
-    <meta name="keyword" content="石猴 博客 诗词 hosts">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-	<meta name="baidu-site-verification" content="VxcVK4cEGe" />
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="alternate" type="application/atom+xml" title="石猴" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        你所不知道的Host｜石猴博客
-        
-    </title>
+  <meta charset="utf-8">
+  
+  <title>你所不知道的host | 石猴博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="黑科技" />
+  
+  
+  
+  
+  <meta name="description" content="Hosts是什么？
+其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。
 
-    <link rel="canonical" href="http://w-nba.coding.me/2017/03/11/你所不知道的Host/">
+1. 修改hosts的作用是什么？
+可以加快域名解析
+可以进行谷歌、脸书、推特等国外网站的浏览
+屏蔽广">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你所不知道的Host">
+<meta property="og:url" content="http://w-nba.coding.me/2017/03/11/你所不知道的Host/index.html">
+<meta property="og:site_name" content="石猴博客">
+<meta property="og:description" content="Hosts是什么？
+其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+1. 修改hosts的作用是什么？
+可以加快域名解析
+可以进行谷歌、脸书、推特等国外网站的浏览
+屏蔽广">
+<meta property="og:updated_time" content="2017-03-11T15:17:31.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="你所不知道的Host">
+<meta name="twitter:description" content="Hosts是什么？
+其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/blog-style.css">
+1. 修改hosts的作用是什么？
+可以加快域名解析
+可以进行谷歌、脸书、推特等国外网站的浏览
+屏蔽广">
+  
+    <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
 </head>
 
-<style>
 
-    header.intro-header {
-        background-image: url('null')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
-" data-ishome = "false" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    石猴
-                </span>
-                's Blog
-            </a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">主页</a>
-                    </li>
-					
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner" style="background:url('uploads/img-m.jpg') no-repeat center center">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" rel="home">
+                <img style="margin-bottom: 10px;border-radius:124px"  width="124px" height="124px" alt="石猴博客" src=" /uploads/ggg.png">
+              </a>
+            
+          </h1>
+
+          
+            <div class="site-description">少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
                     
-                        
-							
-                        <li>
-                            <a href="/tags/">分类</a>
-                        </li>
-							
-						
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
                     
-                        
-							
-                        <li>
-                            <a href="/works/">个人作品集</a>
-                        </li>
-							
-						
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
                     
-					
-					
-                </ul>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
             </div>
-        </div>
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
-
-<!--only post-->
+          </nav>
 
 
-<img class="wechat-title-img"
-     src="/uploads/timg.jpg">
-
-
-<style>
-    
-    header.intro-header {
-        background-image: url('/uploads/timg.jpg')
-    }
-
-    
-</style>
-
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>你所不知道的Host</h1>
-                    
-                    <span class="meta">
-                         作者 石猴
-                        <span>
-                          日期 2017-03-11
-                         </span>
-                    </span>
-					<span id="busuanzi_container_page_pv" style="font-family:Georgia; padding-left=6px">
-							本文阅读量<span id="busuanzi_value_page_pv"></span>次
-					</span>
-                    <div class="tags text-center">
-                        
-                        <a class="tag" href="/tags/#黑科技"
-                           title="黑科技">黑科技</a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="post-title-haojen">
-        <span>
-            你所不知道的Host
-        </span>
-    </div>
+      </div>
+  </div>
 </header>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1>Hosts是什么？</h1>
-<hr>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-你所不知道的Host" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      你所不知道的Host
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/03/11/你所不知道的Host/" class="article-date">
+	  <time datetime="2017-03-11T13:37:38.000Z" itemprop="datePublished">三月 11, 2017</time>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hosts是什么？"><a href="#Hosts是什么？" class="headerlink" title="Hosts是什么？"></a>Hosts是什么？</h1><hr>
 <p>其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。</p>
 <hr>
-<h3>1. 修改hosts的作用是什么？</h3>
-<ul>
+<h3 id="1-修改hosts的作用是什么？"><a href="#1-修改hosts的作用是什么？" class="headerlink" title="1. 修改hosts的作用是什么？"></a>1. 修改hosts的作用是什么？</h3><ul>
 <li>可以加快域名解析</li>
 <li>可以进行谷歌、脸书、推特等国外网站的浏览</li>
 <li>屏蔽广告、网站等等</li>
 </ul>
-<h3>2. hosts的位置</h3>
-<blockquote>
-<p><strong><em>windows</em></strong> xp/2003/vista/2008/7/8/10用户HOSTS文件是在&quot;<strong>c:\windows\system32\drivers\etc\hosts</strong>&quot;
-<strong><em>Mac</em></strong>与<strong><em>Android</em></strong>、<strong><em>iOS</em></strong>用户HOSTS文件是在&quot;<strong>\etc\hosts</strong>&quot;</p>
+<h3 id="2-hosts的位置"><a href="#2-hosts的位置" class="headerlink" title="2. hosts的位置"></a>2. hosts的位置</h3><blockquote>
+<p><strong><em>windows</em></strong> xp/2003/vista/2008/7/8/10用户HOSTS文件是在”<strong>c:\windows\system32\drivers\etc\hosts</strong>“<br><strong><em>Mac</em></strong>与<strong><em>Android</em></strong>、<strong><em>iOS</em></strong>用户HOSTS文件是在”<strong>\etc\hosts</strong>“</p>
 </blockquote>
-<h3>3. 如何修改</h3>
-<ul>
+<h3 id="3-如何修改"><a href="#3-如何修改" class="headerlink" title="3. 如何修改"></a>3. 如何修改</h3><ul>
 <li>直接编辑本机Hosts文件</li>
-<li>牛人写好的直接替换
-<a href="https://github.com/racaljk/hosts" target="_blank" rel="external">github</a>
-<a href="https://pan.baidu.com/s/1dF67DRz" target="_blank" rel="external">百度云</a></li>
+<li>牛人写好的直接替换<br><a href="https://github.com/racaljk/hosts" target="_blank" rel="external">github</a><br><a href="https://pan.baidu.com/s/1dF67DRz" target="_blank" rel="external">百度云</a></li>
 </ul>
 <blockquote>
 <p>提取密码：host</p>
 </blockquote>
 <pre><code>注：这些网站都需要https的协议打开，国内某些软件会强制http，卸载即可。
 </code></pre>
-
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2017/03/15/百度网盘自定义提取码/" data-toggle="tooltip" data-placement="top"
-                           title="百度网盘自定义提取码">&larr; 上一篇</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/2017/03/11/六州歌头·少年侠气/" data-toggle="tooltip" data-placement="top"
-                           title="六州歌头·少年侠气">下一篇 &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                <!-- 多说评论框 start -->
-				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2119741"></script>
-                <div class="comment"   id="uyan_frame">
-                    <div class="ds-thread"
-                         data-thread-key="2017/03/11/你所不知道的Host/"
-                         data-title="你所不知道的Host"
-                         data-url="http://w-nba.coding.me/2017/03/11/你所不知道的Host/">
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Hosts是什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">1. 修改hosts的作用是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2. hosts的位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">3. 如何修改</span></a></li></ol></li></ol></li></ol>
-                </div>
-            </div>
-        </div>
+      
     </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
+
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/03/11/你所不知道的Host/" data-title="你所不知道的Host" data-url="http://w-nba.coding.me/2017/03/11/你所不知道的Host/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"wnba"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/15/百度网盘自定义提取码/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          百度网盘自定义提取码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/11/六州歌头·少年侠气/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">六州歌头·少年侠气</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
+<!-- Table of Contents -->
 
-
-
-
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/w-nba">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-                    <li>
-                        <a target="_blank" href="http://weibo.com/beyondreamcc">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/nbawp">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-                    <li>
-                        <a target="_blank"  href="https://github.com/w-nba">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-					Copyright&copy;石猴2017 Theme by Haojen
-					<br>
-					您是
-					<span style="font-weight:700;font-family:'方正舒体';font-size:16px;">
-					    石猴博客
-					</span>
-					的第
-					<span id="busuanzi_value_site_uv" style="font-family:Georgia;font-size: 18px;color:#f00;"><i class="fa fa-spinner fa-spin"></i></span>
-					位小伙伴
-					<i class="fa fa-thumbs-up" aria-hidden="true" style="padding-left:2px"></i>
-					<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-					<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-					<span id="busuanzi_container_site_pv" style="font-size: 12px;">
-					    本站总访问量: <span id="busuanzi_value_site_pv" style="font-family:Georgia;font-size: 18px;color:#f00;"><i class="fa fa-spinner fa-spin"></i></span>次
-					</span>				
-                </p>
-            </div>
-        </div>
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hosts是什么？"><span class="nav-number">1.</span> <span class="nav-text">Hosts是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修改hosts的作用是什么？"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 修改hosts的作用是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-hosts的位置"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. hosts的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-如何修改"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 如何修改</span></a></li></ol></li></ol></li></ol>
+    
     </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 石猴博客 All Rights Reserved.
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
 </footer>
 
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+<!-- min height -->
 
-<!-- Custom Theme JavaScript -->
-<script src="/js/blog.js"></script>
-
-<!-- async load function -->
 <script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
     }
+  });
 </script>
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://w-nba.coding.me/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
 </script>
 
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
 </script>
 
-<!-- Google Analytics -->
-
-
-
-<!-- Baidu Tongji -->
-
-<script>
-    var _baId = '0dd27d6197fc14f8ace62d2b02ec614a';
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?" + _baId;
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-<!-- swiftype -->
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  _st('install','null','2.0.0');
-</script>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/uploads/ggg.png">
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+  
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1261640784&web_id=1261640784" language="JavaScript"></script>
+  </div>
+
+
 </body>
-
 </html>

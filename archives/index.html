@@ -1,401 +1,533 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="王鹏的个人博客">
-    <meta name="keyword" content="石猴 博客 诗词 hosts">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-	<meta name="baidu-site-verification" content="VxcVK4cEGe" />
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="alternate" type="application/atom+xml" title="石猴" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        石猴博客
-        
-    </title>
+  <meta charset="utf-8">
+  
+  <title>归档 | 石猴博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="石猴博客">
+<meta property="og:url" content="http://w-nba.coding.me/archives/index.html">
+<meta property="og:site_name" content="石猴博客">
+<meta property="og:description" content="少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="石猴博客">
+<meta name="twitter:description" content="少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。">
+  
+    <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="canonical" href="http://w-nba.coding.me/archives/">
+  <script src="/js/jquery-3.1.1.min.js"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/blog-style.css">
-
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
 </head>
 
-<style>
 
-    header.intro-header {
-        background-image: url('null')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
-" data-ishome = "false" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    石猴
-                </span>
-                's Blog
-            </a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">主页</a>
-                    </li>
-					
+  <body>
+
+
+  <header id="allheader" class="site-header" role="banner" style="background:url('uploads/img-m.jpg') no-repeat center center">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" rel="home">
+                <img style="margin-bottom: 10px;border-radius:124px"  width="124px" height="124px" alt="石猴博客" src=" /uploads/ggg.png">
+              </a>
+            
+          </h1>
+
+          
+            <div class="site-description">少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
                     
-                        
-							
-                        <li>
-                            <a href="/tags/">分类</a>
-                        </li>
-							
-						
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
                     
-                        
-							
-                        <li>
-                            <a href="/works/">个人作品集</a>
-                        </li>
-							
-						
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
                     
-					
-					
-                </ul>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
             </div>
-        </div>
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+          </nav>
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
 
-<!-- Main Content -->
-<style>
-    .intro-header .site-heading {
-        margin: 50px;
-    }
-</style>
-
-<!-- Page Header -->
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading text-center">
-                    <h1>archives</h1>
-                    <span class="subheading">可以根据归档日期检索所有文件</span>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
+  </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- archive list -->
+
+
+
+  <div id="container">
+    <div id="wrap">
             
-				
-				
-				
-					
-					
-					<div class="archive archive-year" data-date="2017">
-						<h2 class="archive-title">
-						<span class="fa fa-archive">
-							<a href="/archives/2017">2017</a>
-						</span>
-						</h2>
-				
-				
-					
-					
-					<div class="archive archive-month" data-date="201703">
-						<h3 class="archive-title">
-							<a href="/archives/2017/03">03</a>
-						</h3>
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/03/15/百度网盘自定义提取码/">
-                        <h4 class="post-title">
-                            百度网盘自定义提取码
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/03/11/你所不知道的Host/">
-                        <h4 class="post-title">
-                            你所不知道的Host
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/03/11/六州歌头·少年侠气/">
-                        <h4 class="post-title">
-                            六州歌头·少年侠气
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
-				
-				
-				
-				
-				<div class="one-tag-list">
-                <div class="post-preview">
-                    <a href="/2017/03/11/满江红·写怀/">
-                        <h4 class="post-title">
-                            满江红·写怀
-                        </h4>
-                        
-                    </a>
-                </div>
-				<hr>
-				</div>
-            
+      <div id="content" class="outer">
+        
+          <section id="main">
+  <div class="archives-tags-wrap"><blockquote><span>嗯，目前共计4篇文章</span></blockquote>
+
+
+
+
+	<!-- 完全显示 -->
+	
+	
+		
+		
+		  
+		  
+		  <section class="archives-wrap">
+		    <div class="archive-year-wrap">
+		      <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
+		    </div>
+		    <div class="archives">
+		
+		<article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+
+      <a href="/2017/03/15/百度网盘自定义提取码/" class="archive-article-date">
+		  <time datetime="2017-03-15T15:25:00.000Z" itemprop="datePublished">3月 15, 2017</time>
+	  </a>
+      
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2017/03/15/百度网盘自定义提取码/">百度网盘自定义提取码</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+	
+		
+		
+		<article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+
+      <a href="/2017/03/11/你所不知道的Host/" class="archive-article-date">
+		  <time datetime="2017-03-11T13:37:38.000Z" itemprop="datePublished">3月 11, 2017</time>
+	  </a>
+      
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2017/03/11/你所不知道的Host/">你所不知道的Host</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+	
+		
+		
+		<article class="archive-article archive-type-poetry">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+
+      <a href="/2017/03/11/六州歌头·少年侠气/" class="archive-article-date">
+		  <time datetime="2017-03-11T09:12:49.000Z" itemprop="datePublished">3月 11, 2017</time>
+	  </a>
+      
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2017/03/11/六州歌头·少年侠气/">六州歌头·少年侠气</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+	
+		
+		
+		<article class="archive-article archive-type-poetry">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+
+      <a href="/2017/03/11/满江红·写怀/" class="archive-article-date">
+		  <time datetime="2017-03-11T05:04:41.000Z" itemprop="datePublished">3月 11, 2017</time>
+	  </a>
+      
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2017/03/11/满江红·写怀/">满江红·写怀</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+	
+
+	
+		</div></section>
+	
+
+
+
+</section>
+          <aside id="sidebar">
+  
+    <div class="widget-wrap" style="margin: 20px 0;">
+	<div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="width: 75%;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" 搜索…" value="" name="s" title="Search for:">
+        </label>
+        <input type="submit" class="search-form-submit" value="搜索">
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
         </div>
     </div>
 </div>
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
-                    <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/w-nba">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa  fa-stack-1x fa-inverse">知</i>
-                            </span>
-                        </a>
-                    </li>
-                
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
 
-                
-                    <li>
-                        <a target="_blank" href="http://weibo.com/beyondreamcc">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
+</div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">联系我们</h3>
+    <div class="widget widget_athemes_social_icons">
 
-                
-                    <li>
-                        <a target="_blank" href="https://www.facebook.com/nbawp">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
+    	<ul class="clearfix widget-social-icons">   
+    	
+   			<li><a href="https://github.com/w-nba" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
 
-                
-                    <li>
-                        <a target="_blank"  href="https://github.com/w-nba">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
+   		
+   			<li><a href="http://www.yoursite.com" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
 
-                
+   		
+   			<li><a href="null" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
 
-                </ul>
-                <p class="copyright text-muted">
-					Copyright&copy;石猴2017 Theme by Haojen
-					<br>
-					您是
-					<span style="font-weight:700;font-family:'方正舒体';font-size:16px;">
-					    石猴博客
-					</span>
-					的第
-					<span id="busuanzi_value_site_uv" style="font-family:Georgia;font-size: 18px;color:#f00;"><i class="fa fa-spinner fa-spin"></i></span>
-					位小伙伴
-					<i class="fa fa-thumbs-up" aria-hidden="true" style="padding-left:2px"></i>
-					<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-					<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-					<span id="busuanzi_container_site_pv" style="font-size: 12px;">
-					    本站总访问量: <span id="busuanzi_value_site_pv" style="font-family:Georgia;font-size: 18px;color:#f00;"><i class="fa fa-spinner fa-spin"></i></span>次
-					</span>				
-                </p>
-            </div>
-        </div>
+   		
+   			<li><a href="null" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+
+   		
+   			<li><a href="null" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+
+   		
+   			<li><a href="null" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+
+   		
+   			<li><a href="null" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
+
+   		
+   			<li><a href="null" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
+
+   		
+   		</ul>
+
+
+   		<!--
+   		<ul class="clearfix widget-social-icons">   		
+   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
+		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
+			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
+			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
+			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
+			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
+		</ul> -->
+
     </div>
+  </div>
+
+
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>最新文章</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/15/百度网盘自定义提取码/">百度网盘自定义提取码</a></h6>
+              <span>三月 15, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/11/你所不知道的Host/">你所不知道的Host</a></h6>
+              <span>三月 11, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/11/六州歌头·少年侠气/">六州歌头·少年侠气</a></h6>
+              <span>三月 11, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/03/11/满江红·写怀/">满江红·写怀</a></h6>
+              <span>三月 11, 2017</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/诗词/" style="font-size: 10px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 10px;">黑科技</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+	<div class="widget-wrap">	
+		<h3 class="widget-title">友情链接</h3>
+		<div class="widget">
+			<ul>
+				
+					<li><a href="http://uedc.163.com" target="_blank">网易前端</a></li>
+				
+					<li><a href="http://www.alloyteam.com" target="_blank">腾讯前端</a></li>
+				
+					<li><a href="http://fex.baidu.com" target="_blank">百度前端</a></li>
+				
+					<li><a href=" http://www.75team.com" target="_blank">360前端</a></li>
+				
+					<li><a href="  http://HTML5.360.cn/" target="_blank">H5基地</a></li>
+				
+					<li><a href="http://www.yyyweb.com" target="_blank">前端里</a></li>
+				
+					<li><a href="http://www.bootcdn.cn/" target="_blank">bootcdn</a></li>
+				
+					<li><a href="http://www.htmleaf.com/" target="_blank">JQuery之家</a></li>
+				
+					<li><a href="http://www.jq22.com/" target="_blank">jq</a></li>
+				
+					<li><a href="http://www.gushiwen.org/shiju/" target="_blank">诗词网</a></li>
+				
+					<li><a href="http://tgideas.qq.com/" target="_blank">腾讯游戏前端</a></li>
+				
+					<li><a href="http://taobaofed.org/" target="_blank">淘宝前端</a></li>
+				
+					<li><a href="http://www.css88.com/" target="_blank">web前端集合</a></li>
+				
+			</ul>
+		</div>
+	</div>
+ 
+  
+</aside>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 石猴博客 All Rights Reserved.
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
 </footer>
 
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+<!-- min height -->
 
-<!-- Custom Theme JavaScript -->
-<script src="/js/blog.js"></script>
-
-<!-- async load function -->
 <script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
     }
+  });
 </script>
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://w-nba.coding.me/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
 </script>
 
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
 </script>
 
-<!-- Google Analytics -->
-
-
-
-<!-- Baidu Tongji -->
-
-<script>
-    var _baId = '0dd27d6197fc14f8ace62d2b02ec614a';
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?" + _baId;
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-<!-- swiftype -->
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  _st('install','null','2.0.0');
-</script>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="/uploads/ggg.png">
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+  
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1261640784&web_id=1261640784" language="JavaScript"></script>
+  </div>
+
+
 </body>
-
 </html>
