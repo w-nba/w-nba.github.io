@@ -271,7 +271,7 @@ object {
 	text-decoration: none;
 	}
 .site-description {
-	color: #999;
+	color: #fff;
 	font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -330,7 +330,7 @@ object {
 	padding: 20px 0 0;
 	}
 #main-navigation .sf-menu {
-	background: #060608;
+
 	}
 #main-navigation .sf-menu > ul > li:after {
 	width: 1px;
@@ -345,12 +345,6 @@ object {
 #main-navigation .sf-menu > ul > li:last-child:after {
 	display: none;
 	}
-#main-navigation .sf-menu > ul > li:hover:after,
-#main-navigation .sf-menu > ul > li.sfHover:after,
-#main-navigation .sf-menu > ul > li.current_page_item:after,
-#main-navigation .sf-menu > ul > li.current-menu-item:after {
-	color: #ff2828;
-	}
 #main-navigation li a {
 	margin: 0 -2px 0 0;
 	padding: 0 20px;
@@ -360,7 +354,10 @@ object {
 	font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	line-height: 50px;
+	line-height: 60px;
+	}
+#main-navigation li:first-child a{
+		padding-left:0;
 	}
 #main-navigation li:hover ul,
 #main-navigation li.sfHover ul {
@@ -386,8 +383,7 @@ object {
 #main-navigation li.current-page-parent > a,
 #main-navigation li.current-page-ancestor > a,
 #main-navigation li.current_page_ancestor > a {
-	color: #fff;
-	background: #ff2828;
+	color: #ff0000;
 	}
 #main-navigation li:hover li a,
 #main-navigation li.sfHover li a {
@@ -399,7 +395,7 @@ object {
 	}
 #main-navigation li:hover li a:hover,
 #main-navigation li.sfHover li a:hover {
-	background: #eb2121;
+	color: #d8e611;
 	}
 
 /* Small Navigation */
