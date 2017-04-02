@@ -383,7 +383,7 @@ object {
 #main-navigation li.current-page-parent > a,
 #main-navigation li.current-page-ancestor > a,
 #main-navigation li.current_page_ancestor > a {
-	color: #ff0000;
+	color: #ff0;
 	}
 #main-navigation li:hover li a,
 #main-navigation li.sfHover li a {
