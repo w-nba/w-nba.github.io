@@ -402,7 +402,7 @@ object {
 .nav-open,
 .nav-close {
 	display: none;
-	color: #eb2121;
+	color: #ffabab;
 	font-size: 1.2em;
 	font-weight: 400;
 	font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
@@ -410,19 +410,20 @@ object {
 	text-transform: uppercase;
 	line-height: 50px;
 	letter-spacing: 1px;
-	background: #060608;
+
 	}
 @media only screen and (max-width: 60em) {
 	.nav-open {
 		display: block;
-		text-align: center;
+		text-align: left;
+		text-indent: 20px;
 		}
 	#main-navigation:target > .nav-open {
 		display: none;
 		}
 	#main-navigation:target > .nav-close {
 		display: block;
-		text-align: center;
+		text-align: left;
 		}
 	#main-navigation > .sf-menu {
 		position: relative;
@@ -436,7 +437,7 @@ object {
 		max-height: 0;
 		max-width: 16em;
 		overflow: hidden;
-		background: #333;
+		background: #999;
 		z-index: 1;
 		}
 	#main-navigation:target > .sf-menu > ul {
@@ -448,11 +449,14 @@ object {
 	#main-navigation > .sf-menu > ul > li {
 		float: none;
 		display: block;
-		border-bottom: 1px dotted #565656;
+		border-bottom: 1px dotted #fff;
 		}
 	#main-navigation > .sf-menu > ul > li:after {
 		display: none;
 		}
+	#main-navigation li:first-child a{
+		padding-left: 20px;
+	}
 	#main-navigation li a {
 		float: none;
 		display: block;
