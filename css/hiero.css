@@ -412,11 +412,12 @@ object {
 	letter-spacing: 1px;
 
 	}
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 48em) {
 	.nav-open {
 		display: block;
 		text-align: left;
 		text-indent: 20px;
+		cursor: pointer;
 		}
 	#main-navigation:target > .nav-open {
 		display: none;
