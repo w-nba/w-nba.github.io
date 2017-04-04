@@ -1206,12 +1206,12 @@ body.search .page .entry-footer {
 		width: 100%;
 		}
 	}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 750px) {
 	.site-footer {
 		text-align: center;
 		}
 	.site-footer .site-info,
-	.site-footer .site-credit {
+	.site-footer .site-credit{
 		float: none;
 		}
 	}
