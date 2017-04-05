@@ -457,7 +457,7 @@ body {
 }
 .article-header h1 {
   margin: 0 0 3px 0;
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.2;
 }
 .article-header h1 a {
@@ -785,7 +785,7 @@ a.article-title:hover {
 .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #eef1f8;
+  color: #3f2f54;
   line-height: 1em;
   font-weight: bold;
 }
@@ -1600,12 +1600,12 @@ pre .javascript .function {
 }
 .widget_athemes_tabs .widget ul li a {
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-transform: uppercase;
   line-height: 1.2;
   color: #222;
   font-weight: 700;
-  font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
+  font-family: "Yanone Kaffeesatz", "微软雅黑", Arial, Helvetica, sans-serif;
 }
 .widget_athemes_tabs .widget ul li a:hover {
   color: #ff2828;
