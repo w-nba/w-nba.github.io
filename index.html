@@ -108,6 +108,14 @@
 </header>
 
 
+  <div style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img width="100%" alt="" src="/css/images/pose.jpg">
+      </div>
+
+  </div>
+
 
 
   <div id="container">
@@ -141,19 +149,27 @@
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/03/每周烧脑-1/' " >
       
-        <p>完美数
-完美数定义如下：</p>
-<ol>
-<li>正整数</li>
-<li>是自己的因数（除自身以外）之和</li>
-</ol>
-<p>如28是完美数，因为 1 + 2 + 4 + 7 + 14 = 28</p>
-<p>给定一个数字，判断是否是完美数：</p>
-<p>&lt;!-- more --&gt;</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">  &lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">IsPerfectNumber</span>(<span class="params">number</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> sum = <span class="number">0</span>;</div><div class="line">		<span class="keyword">var</span> num=<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.sqrt(number));</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = num; i &gt; <span class="number">1</span>; i--) &#123;</div><div class="line">			<span class="keyword">if</span>(number%i == <span class="number">0</span>)&#123;</div><div class="line">				sum = sum + i +number/i; </div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>((sum+<span class="number">1</span>) &gt; <span class="number">0</span>)&#123;</div><div class="line">			alert(<span class="string">"此数为完美数！因子和为"</span>+(sum+<span class="number">1</span>));</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			alert(<span class="string">"此数非完美数！"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
-<p>此题在于减少运算量，先对其进行开方处理。
-有更简便的，可回复贴码。</p>
+        
 
+          
+            <div class="entry-thumbnail">
+              <a href="/2017/04/03/每周烧脑-1/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/5" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+            </div>
+            <div class="entry-summary">
+            完美数完美数定义如下：
+
+正整数
+是自己的因数（除自身以外）之和
+
+如28是完美数，因为 1 + 2 + 4 + 7 + 14 = 28
+给定一个数字，判断是否是完美数：  &lt;script type="text/javascript"&gt;	function IsPerfectNumber(number)&#123;		var sum = 0;		var num=Math.floor...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2017/04/03/每周烧脑-1/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -198,19 +214,22 @@
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/15/百度网盘自定义提取码/' " >
       
-        <p>请按照以下步骤进行操作：</p>
-<p>在浏览器中打开百度云盘，选中需要分享的文件，然后点击分享按钮；
-点击分享按钮后会弹出一个模态框，先不管它，按 F12 打开开发者工具，切换至控制台（Console），将以下代码复制粘贴到控制台，然后回车；
-<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">javascript: <span class="built_in">require</span>([<span class="string">"function-widget-1:share/util/service/createLinkShare.js"</span>])</div><div class="line"> .prototype.makePrivatePassword = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> prompt(<span class="string">"自定义百度网盘提取码"</span>, <span class="string">"host"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>&lt;!-- more --&gt;
-然后点击创建私密链接，会弹出输入框，这时输入你想自定义的密码即可！
-在此黑科技使用过程中需要注意以下事项：</p>
-<p>请按照教程一步一步的进行，否则可能会出现错误或失败！
-自定义的密码字符和必须为4（一个字母或数字的字符数是1，一个汉字的字符数是3，因此如果密码中有一个汉字则只能加一个字母或数字），如：1232、S猴等。</p>
-<p>附GIF图片一张，动画演示让你更加明了：
-<img src="/uploads/baiduyun.gif" alt="tiquma">
-本文转自老d博客。</p>
+        
 
+          
+            <div class="entry-thumbnail">
+              <a href="/2017/03/15/百度网盘自定义提取码/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/10" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+            </div>
+            <div class="entry-summary">
+            请按照以下步骤进行操作：
+在浏览器中打开百度云盘，选中需要分享的文件，然后点击分享按钮；点击分享按钮后会弹出一个模态框，先不管它，按 F12 打开开发者工具，切换至控制台（Console），将以下代码复制粘贴到控制台，然后回车；javascript: require(["function-widget-1:share/util/service/createLinkShare.js"]) .p...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2017/03/15/百度网盘自定义提取码/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -255,35 +274,26 @@
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/你所不知道的Host/' " >
       
-        <h1>Hosts是什么？</h1>
-<hr>
-<p>其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。</p>
-<hr>
-<p>&lt;!-- more --&gt;</p>
-<h3>1. 修改hosts的作用是什么？</h3>
-<ul>
-<li>可以加快域名解析</li>
-<li>可以进行谷歌、脸书、推特等国外网站的浏览</li>
-<li>屏蔽广告、网站等等</li>
-</ul>
-<h3>2. hosts的位置</h3>
-<blockquote>
-<p><strong><em>windows</em></strong> xp/2003/vista/2008/7/8/10用户HOSTS文件是在&quot;<strong>c:\windows\system32\drivers\etc\hosts</strong>&quot;
-<strong><em>Mac</em></strong>与<strong><em>Android</em></strong>、<strong><em>iOS</em></strong>用户HOSTS文件是在&quot;<strong>\etc\hosts</strong>&quot;</p>
-</blockquote>
-<h3>3. 如何修改</h3>
-<ul>
-<li>直接编辑本机Hosts文件</li>
-<li>牛人写好的直接替换
-<a href="https://github.com/racaljk/hosts" target="_blank" rel="external">github</a>
-<a href="https://pan.baidu.com/s/1dF67DRz" target="_blank" rel="external">百度云</a></li>
-</ul>
-<blockquote>
-<p>提取密码：host</p>
-</blockquote>
-<pre><code>注：这些网站都需要https的协议打开，国内某些软件会强制http，卸载即可。
-</code></pre>
+        
 
+          
+            <div class="entry-thumbnail">
+              <a href="/2017/03/11/你所不知道的Host/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+            </div>
+            <div class="entry-summary">
+            Hosts是什么？
+其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。
+1. 修改hosts的作用是什么？
+可以加快域名解析
+可以进行谷歌、脸书、推特等国外网站的浏览
+屏...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2017/03/11/你所不知道的Host/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -328,8 +338,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/六州歌头·少年侠气/' " >
       
-        <p>少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。推翘勇。矜豪纵。轻盖拥。联飞鞚。斗城东。轰饮酒垆，春色浮寒瓮。吸海垂虹。闲呼鹰嗾犬，白羽摘雕弓。狡穴俄空。乐匆匆。
-似黄粱梦。辞丹凤。明月共。漾孤篷。官冗從。怀倥偬。落尘笼。簿书丛。鹖弁如云众。供粗用。忽奇功。笳鼓动。渔阳弄。思悲翁。不请长缨，系取天骄种。剑吼西风。恨登山临水，手寄七弦桐。目送归鸿。</p>
+        <p>少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。推翘勇。矜豪纵。轻盖拥。联飞鞚。斗城东。轰饮酒垆，春色浮寒瓮。吸海垂虹。闲呼鹰嗾犬，白羽摘雕弓。狡穴俄空。乐匆匆。<br>似黄粱梦。辞丹凤。明月共。漾孤篷。官冗從。怀倥偬。落尘笼。簿书丛。鹖弁如云众。供粗用。忽奇功。笳鼓动。渔阳弄。思悲翁。不请长缨，系取天骄种。剑吼西风。恨登山临水，手寄七弦桐。目送归鸿。</p>
 
       
     </div>
@@ -375,8 +384,7 @@
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/满江红·写怀/' " >
       
-        <p>怒发冲冠，凭栏处、潇潇雨歇。抬望眼，仰天长啸，壮怀激烈。三十功名尘与土，八千里路云和月。莫等闲，白了少年头，空悲切！
-靖康耻，犹未雪。臣子恨，何时灭！驾长车，踏破贺兰山缺。壮志饥餐胡虏肉，笑谈渴饮匈奴血。待从头、收拾旧山河，朝天阙。</p>
+        <p>怒发冲冠，凭栏处、潇潇雨歇。抬望眼，仰天长啸，壮怀激烈。三十功名尘与土，八千里路云和月。莫等闲，白了少年头，空悲切！<br>靖康耻，犹未雪。臣子恨，何时灭！驾长车，踏破贺兰山缺。壮志饥餐胡虏肉，笑谈渴饮匈奴血。待从头、收拾旧山河，朝天阙。</p>
 
       
     </div>
