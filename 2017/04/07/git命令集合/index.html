@@ -11,28 +11,61 @@
   
   
   
-  <meta name="description" content="git init初始化本地git仓库（创建新仓库）
-git config –global user.name “xxx”配置用户名
-git config –global user.email “xxx@xxx.com”配置邮件
-git config –global color.ui truegit status等命令自动着色 
-git config –global color.status au">
+  <meta name="description" content="git init
+初始化本地git仓库（创建新仓库）
+
+
+git config --global user.name &amp;quot;xxx&amp;quot;
+配置用户名
+
+
+git config --global user.email &amp;quot;xxx@xxx.com&amp;quot;
+配置邮件
+
+
+git config --global color.ui true
+git status等命令自动着色
+
+&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git命令集合">
 <meta property="og:url" content="http://stonemonkey.top/2017/04/07/git命令集合/index.html">
 <meta property="og:site_name" content="石猴博客">
-<meta property="og:description" content="git init初始化本地git仓库（创建新仓库）
-git config –global user.name “xxx”配置用户名
-git config –global user.email “xxx@xxx.com”配置邮件
-git config –global color.ui truegit status等命令自动着色 
-git config –global color.status au">
-<meta property="og:updated_time" content="2017-04-07T14:11:16.392Z">
+<meta property="og:description" content="git init
+初始化本地git仓库（创建新仓库）
+
+
+git config --global user.name &amp;quot;xxx&amp;quot;
+配置用户名
+
+
+git config --global user.email &amp;quot;xxx@xxx.com&amp;quot;
+配置邮件
+
+
+git config --global color.ui true
+git status等命令自动着色
+
+&amp;">
+<meta property="og:updated_time" content="2017-04-07T14:12:44.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git命令集合">
-<meta name="twitter:description" content="git init初始化本地git仓库（创建新仓库）
-git config –global user.name “xxx”配置用户名
-git config –global user.email “xxx@xxx.com”配置邮件
-git config –global color.ui truegit status等命令自动着色 
-git config –global color.status au">
+<meta name="twitter:description" content="git init
+初始化本地git仓库（创建新仓库）
+
+
+git config --global user.name &amp;quot;xxx&amp;quot;
+配置用户名
+
+
+git config --global user.email &amp;quot;xxx@xxx.com&amp;quot;
+配置邮件
+
+
+git config --global color.ui true
+git status等命令自动着色
+
+&amp;">
   
     <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
   
@@ -159,91 +192,335 @@ git config –global color.status au">
     <div class="article-entry" itemprop="articleBody"  >
       
         <blockquote>
-<p>git init<br>初始化本地git仓库（创建新仓库）</p>
-<p>git config –global user.name “xxx”<br>配置用户名</p>
-<p>git config –global user.email “xxx@xxx.com”<br>配置邮件</p>
-<p>git config –global color.ui true<br>git status等命令自动着色 </p>
-<p>git config –global color.status auto    </p>
-<p>git config –global color.diff auto  </p>
-<p>git config –global color.branch auto  </p>
-<p>git config –global color.interactive auto</p>
-<p>git config –global –unset http.proxy<br>remove  proxy configuration on git</p>
-<p>git clone git+ssh://git@192.168.53.168/VT.git<br>clone远程仓库</p>
-<p>git status<br>查看当前版本状态（是否修改）</p>
-<p>git add xyz<br>添加xyz文件至index</p>
-<p>git add .<br>增加当前子目录下所有更改过的文件至index</p>
-<p>git commit -m ‘xxx’<br>提交</p>
-<p>git commit –amend -m ‘xxx’<br>合并上一次提交（用于反复修改）</p>
-<p>git commit -am ‘xxx’<br>将add和commit合为一步</p>
-<p>git rm xxx<br>删除index中的文件</p>
-<p>git rm -r *<br>递归删除</p>
-<p>git log<br>显示提交日志</p>
-<p>git log -1<br>显示1行日志 -n为n行</p>
+<p>git init<br>
+初始化本地git仓库（创建新仓库）</p>
+</blockquote>
+<blockquote>
+<p>git config --global user.name &quot;xxx&quot;<br>
+配置用户名</p>
+</blockquote>
+<blockquote>
+<p>git config --global user.email &quot;xxx@xxx.com&quot;<br>
+配置邮件</p>
+</blockquote>
+<blockquote>
+<p>git config --global color.ui true<br>
+git status等命令自动着色</p>
+</blockquote>
+<p>&lt;!-- more --&gt;</p>
+<blockquote>
+<p>git config --global color.status auto</p>
+</blockquote>
+<blockquote>
+<p>git config --global color.diff auto</p>
+</blockquote>
+<blockquote>
+<p>git config --global color.branch auto</p>
+</blockquote>
+<blockquote>
+<p>git config --global color.interactive auto</p>
+</blockquote>
+<blockquote>
+<p>git config --global --unset http.proxy<br>
+remove  proxy configuration on git</p>
+</blockquote>
+<blockquote>
+<p>git clone git+ssh://git@192.168.53.168/VT.git<br>
+clone远程仓库</p>
+</blockquote>
+<blockquote>
+<p>git status<br>
+查看当前版本状态（是否修改）</p>
+</blockquote>
+<blockquote>
+<p>git add xyz<br>
+添加xyz文件至index</p>
+</blockquote>
+<blockquote>
+<p>git add .<br>
+增加当前子目录下所有更改过的文件至index</p>
+</blockquote>
+<blockquote>
+<p>git commit -m 'xxx'<br>
+提交</p>
+</blockquote>
+<blockquote>
+<p>git commit --amend -m 'xxx'<br>
+合并上一次提交（用于反复修改）</p>
+</blockquote>
+<blockquote>
+<p>git commit -am 'xxx'<br>
+将add和commit合为一步</p>
+</blockquote>
+<blockquote>
+<p>git rm xxx<br>
+删除index中的文件</p>
+</blockquote>
+<blockquote>
+<p>git rm -r *<br>
+递归删除</p>
+</blockquote>
+<blockquote>
+<p>git log<br>
+显示提交日志</p>
+</blockquote>
+<blockquote>
+<p>git log -1<br>
+显示1行日志 -n为n行</p>
+</blockquote>
+<blockquote>
 <p>git log -5</p>
-<p>git log –stat<br>显示提交日志及相关变动文件</p>
+</blockquote>
+<blockquote>
+<p>git log --stat<br>
+显示提交日志及相关变动文件</p>
+</blockquote>
+<blockquote>
 <p>git log -p -m</p>
-<p>git show dfb02e6e4f2f7b573337763e5c0013802e392818<br>显示某个提交的详细内容</p>
-<p>git show dfb02<br>可只用commitid的前几位</p>
-<p>git show HEAD<br>显示HEAD提交日志</p>
-<p>git show HEAD^<br>显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本^5为上5个版本</p>
-<p>git tag<br>显示已存在的tag</p>
-<p>git tag -a v2.0 -m ‘xxx’<br>增加v2.0的tag</p>
-<p>git show v2.0<br>显示v2.0的日志及详细内容</p>
-<p>git log v2.0<br>显示v2.0的日志</p>
-<p>git diff<br>显示所有未添加至index的变更</p>
-<p>git diff –cached<br>显示所有已添加index但还未commit的变更</p>
-<p>git diff HEAD^<br>比较与上一个版本的差异</p>
-<p>git diff HEAD – ./lib<br>比较与HEAD版本lib目录的差异</p>
-<p>git diff origin/master..master<br>比较远程分支master上有本地分支master上没有的</p>
-<p>git diff origin/master..master –stat<br>只显示差异的文件，不显示具体内容</p>
-<p>git remote add origin git+ssh://git@192.168.53.168/VT.git<br>增加远程定义（用于push/pull/fetch）</p>
-<p>git branch<br>显示本地分支</p>
-<p>git branch –contains 50089<br>显示包含提交50089的分支</p>
-<p>git branch -a<br>显示所有分支</p>
-<p>git branch -r<br>显示所有原创分支</p>
-<p>git branch –merged<br>显示所有已合并到当前分支的分支</p>
-<p>git branch –no-merged<br>显示所有未合并到当前分支的分支</p>
-<p>git branch -m master master_copy<br>本地分支改名</p>
-<p>git checkout -b master_copy<br>从当前分支创建新分支master_copy并检出</p>
-<p>git checkout -b master master_copy<br>上面的完整版</p>
-<p>git checkout features/performance<br>检出已存在的features/performance分支</p>
-<p>git checkout –track hotfixes/BJVEP933<br>检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</p>
-<p>git checkout v2.0<br>检出版本v2.0</p>
-<p>git checkout -b devel origin/develop<br>从远程分支develop创建新本地分支devel并检出</p>
-<p>git checkout – README<br>检出head版本的README文件（可用于修改错误回退）</p>
-<p>git merge origin/master<br>合并远程master分支至当前分支</p>
-<p>git cherry-pick ff44785404a8e<br>合并提交ff44785404a8e的修改</p>
-<p>git push origin master<br>将当前分支push到远程master分支</p>
-<p>git push origin :hotfixes/BJVEP933<br>删除远程仓库的hotfixes/BJVEP933分支</p>
-<p>git push –tags<br>把所有tag推送到远程仓库</p>
-<p>git fetch<br>获取所有远程分支（不更新本地分支，另需merge）</p>
-<p>git fetch –prune<br>获取所有原创分支并清除服务器上已删掉的分支</p>
-<p>git pull origin master<br>获取远程分支master并merge到当前分支</p>
-<p>git mv README README2<br>重命名文件README为README2</p>
-<p>git reset –hard HEAD<br>将当前版本重置为HEAD（通常用于merge失败回退）</p>
+</blockquote>
+<blockquote>
+<p>git show dfb02e6e4f2f7b573337763e5c0013802e392818<br>
+显示某个提交的详细内容</p>
+</blockquote>
+<blockquote>
+<p>git show dfb02<br>
+可只用commitid的前几位</p>
+</blockquote>
+<blockquote>
+<p>git show HEAD<br>
+显示HEAD提交日志</p>
+</blockquote>
+<blockquote>
+<p>git show HEAD^<br>
+显示HEAD的父（上一个版本）的提交日志 ^<sup>为上两个版本</sup>5为上5个版本</p>
+</blockquote>
+<blockquote>
+<p>git tag<br>
+显示已存在的tag</p>
+</blockquote>
+<blockquote>
+<p>git tag -a v2.0 -m 'xxx'<br>
+增加v2.0的tag</p>
+</blockquote>
+<blockquote>
+<p>git show v2.0<br>
+显示v2.0的日志及详细内容</p>
+</blockquote>
+<blockquote>
+<p>git log v2.0<br>
+显示v2.0的日志</p>
+</blockquote>
+<blockquote>
+<p>git diff<br>
+显示所有未添加至index的变更</p>
+</blockquote>
+<blockquote>
+<p>git diff --cached<br>
+显示所有已添加index但还未commit的变更</p>
+</blockquote>
+<blockquote>
+<p>git diff HEAD^<br>
+比较与上一个版本的差异</p>
+</blockquote>
+<blockquote>
+<p>git diff HEAD -- ./lib<br>
+比较与HEAD版本lib目录的差异</p>
+</blockquote>
+<blockquote>
+<p>git diff origin/master..master<br>
+比较远程分支master上有本地分支master上没有的</p>
+</blockquote>
+<blockquote>
+<p>git diff origin/master..master --stat<br>
+只显示差异的文件，不显示具体内容</p>
+</blockquote>
+<blockquote>
+<p>git remote add origin git+ssh://git@192.168.53.168/VT.git
+增加远程定义（用于push/pull/fetch）</p>
+</blockquote>
+<blockquote>
+<p>git branch<br>
+显示本地分支</p>
+</blockquote>
+<blockquote>
+<p>git branch --contains 50089<br>
+显示包含提交50089的分支</p>
+</blockquote>
+<blockquote>
+<p>git branch -a<br>
+显示所有分支</p>
+</blockquote>
+<blockquote>
+<p>git branch -r<br>
+显示所有原创分支</p>
+</blockquote>
+<blockquote>
+<p>git branch --merged<br>
+显示所有已合并到当前分支的分支</p>
+</blockquote>
+<blockquote>
+<p>git branch --no-merged<br>
+显示所有未合并到当前分支的分支</p>
+</blockquote>
+<blockquote>
+<p>git branch -m master master_copy<br>
+本地分支改名</p>
+</blockquote>
+<blockquote>
+<p>git checkout -b master_copy<br>
+从当前分支创建新分支master_copy并检出</p>
+</blockquote>
+<blockquote>
+<p>git checkout -b master master_copy<br>
+上面的完整版</p>
+</blockquote>
+<blockquote>
+<p>git checkout features/performance<br>
+检出已存在的features/performance分支</p>
+</blockquote>
+<blockquote>
+<p>git checkout --track hotfixes/BJVEP933<br>
+检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</p>
+</blockquote>
+<blockquote>
+<p>git checkout v2.0<br>
+检出版本v2.0</p>
+</blockquote>
+<blockquote>
+<p>git checkout -b devel origin/develop<br>
+从远程分支develop创建新本地分支devel并检出</p>
+</blockquote>
+<blockquote>
+<p>git checkout -- README<br>
+检出head版本的README文件（可用于修改错误回退）</p>
+</blockquote>
+<blockquote>
+<p>git merge origin/master<br>
+合并远程master分支至当前分支</p>
+</blockquote>
+<blockquote>
+<p>git cherry-pick ff44785404a8e<br>
+合并提交ff44785404a8e的修改</p>
+</blockquote>
+<blockquote>
+<p>git push origin master<br>
+将当前分支push到远程master分支</p>
+</blockquote>
+<blockquote>
+<p>git push origin :hotfixes/BJVEP933<br>
+删除远程仓库的hotfixes/BJVEP933分支</p>
+</blockquote>
+<blockquote>
+<p>git push --tags<br>
+把所有tag推送到远程仓库</p>
+</blockquote>
+<blockquote>
+<p>git fetch<br>
+获取所有远程分支（不更新本地分支，另需merge）</p>
+</blockquote>
+<blockquote>
+<p>git fetch --prune<br>
+获取所有原创分支并清除服务器上已删掉的分支</p>
+</blockquote>
+<blockquote>
+<p>git pull origin master<br>
+获取远程分支master并merge到当前分支</p>
+</blockquote>
+<blockquote>
+<p>git mv README README2<br>
+重命名文件README为README2</p>
+</blockquote>
+<blockquote>
+<p>git reset --hard HEAD<br>
+将当前版本重置为HEAD（通常用于merge失败回退）</p>
+</blockquote>
+<blockquote>
 <p>git rebase</p>
-<p>git branch -d hotfixes/BJVEP933<br>删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）</p>
-<p>git branch -D hotfixes/BJVEP933<br>强制删除分支hotfixes/BJVEP933</p>
-<p>git ls-files<br>列出git index包含的文件</p>
-<p>git show-branch<br>图示当前分支历史</p>
-<p>git show-branch –all<br>图示所有分支历史</p>
-<p>git whatchanged<br>显示提交历史对应的文件修改</p>
-<p>git revert dfb02e6e4f2f7b573337763e5c0013802e392818<br>撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818</p>
-<p>git ls-tree HEAD<br>内部命令：显示某个&gt; git对象</p>
-<p>git rev-parse v2.0<br>内部命令：显示某个ref对于的SHA1 HASH</p>
-<p>git reflog<br>显示所有提交，包括孤立节点</p>
+</blockquote>
+<blockquote>
+<p>git branch -d hotfixes/BJVEP933<br>
+删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）</p>
+</blockquote>
+<blockquote>
+<p>git branch -D hotfixes/BJVEP933<br>
+强制删除分支hotfixes/BJVEP933</p>
+</blockquote>
+<blockquote>
+<p>git ls-files<br>
+列出git index包含的文件</p>
+</blockquote>
+<blockquote>
+<p>git show-branch<br>
+图示当前分支历史</p>
+</blockquote>
+<blockquote>
+<p>git show-branch --all<br>
+图示所有分支历史</p>
+</blockquote>
+<blockquote>
+<p>git whatchanged<br>
+显示提交历史对应的文件修改</p>
+</blockquote>
+<blockquote>
+<p>git revert dfb02e6e4f2f7b573337763e5c0013802e392818<br>
+撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818</p>
+</blockquote>
+<blockquote>
+<p>git ls-tree HEAD<br>
+内部命令：显示某个&gt; git对象</p>
+</blockquote>
+<blockquote>
+<p>git rev-parse v2.0<br>
+内部命令：显示某个ref对于的SHA1 HASH</p>
+</blockquote>
+<blockquote>
+<p>git reflog<br>
+显示所有提交，包括孤立节点</p>
+</blockquote>
+<blockquote>
 <p>git show HEAD@{5}</p>
-<p>git show master@{yesterday}<br>显示master分支昨天的状态</p>
-<p>git log –pretty=format:’%h %s’ –graph<br>图示提交日志</p>
+</blockquote>
+<blockquote>
+<p>git show master@{yesterday}<br>
+显示master分支昨天的状态</p>
+</blockquote>
+<blockquote>
+<p>git log --pretty=format:'%h %s' --graph<br>
+图示提交日志</p>
+</blockquote>
+<blockquote>
 <p>git show HEAD~3</p>
-<p>git show -s –pretty=raw 2be7fcb476</p>
-<p>git stash<br>暂存当前修改，将所有至为HEAD状态</p>
-<p>git stash list<br>查看所有暂存</p>
-<p>git stash show -p stash@{0}<br>参考第一次暂存</p>
-<p>git stash apply stash@{0}<br>应用第一次暂存</p>
-<p>git grep “delete from”<br>文件中搜索文本“delete from”</p>
-<p>git grep -e ‘&gt; define’ –and -e SORT_DIRENT</p>
+</blockquote>
+<blockquote>
+<p>git show -s --pretty=raw 2be7fcb476</p>
+</blockquote>
+<blockquote>
+<p>git stash<br>
+暂存当前修改，将所有至为HEAD状态</p>
+</blockquote>
+<blockquote>
+<p>git stash list<br>
+查看所有暂存</p>
+</blockquote>
+<blockquote>
+<p>git stash show -p stash@{0}<br>
+参考第一次暂存</p>
+</blockquote>
+<blockquote>
+<p>git stash apply stash@{0}<br>
+应用第一次暂存</p>
+</blockquote>
+<blockquote>
+<p>git grep &quot;delete from&quot;<br>
+文件中搜索文本“delete from”</p>
+</blockquote>
+<blockquote>
+<p>git grep -e '&gt; define' --and -e SORT_DIRENT</p>
+</blockquote>
+<blockquote>
 <p>git gc</p>
+</blockquote>
+<blockquote>
 <p>git fsck</p>
 </blockquote>
 
