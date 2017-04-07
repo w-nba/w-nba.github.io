@@ -117,6 +117,139 @@
         
           <section id="main">
   
+    <article id="post-git命令集合"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/07/git命令集合/">git命令集合</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	发表于 <a href="/2017/04/07/git命令集合/" class="article-date">
+	  <time datetime="2017-04-07T14:09:51.000Z" itemprop="datePublished">四月 7, 2017</time>
+	</a>
+
+	   
+    </div>
+    <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/07/git命令集合/' " >
+      
+        <blockquote>
+<p>git init<br>初始化本地git仓库（创建新仓库）</p>
+<p>git config –global user.name “xxx”<br>配置用户名</p>
+<p>git config –global user.email “xxx@xxx.com”<br>配置邮件</p>
+<p>git config –global color.ui true<br>git status等命令自动着色 </p>
+<p>git config –global color.status auto    </p>
+<p>git config –global color.diff auto  </p>
+<p>git config –global color.branch auto  </p>
+<p>git config –global color.interactive auto</p>
+<p>git config –global –unset http.proxy<br>remove  proxy configuration on git</p>
+<p>git clone git+ssh://git@192.168.53.168/VT.git<br>clone远程仓库</p>
+<p>git status<br>查看当前版本状态（是否修改）</p>
+<p>git add xyz<br>添加xyz文件至index</p>
+<p>git add .<br>增加当前子目录下所有更改过的文件至index</p>
+<p>git commit -m ‘xxx’<br>提交</p>
+<p>git commit –amend -m ‘xxx’<br>合并上一次提交（用于反复修改）</p>
+<p>git commit -am ‘xxx’<br>将add和commit合为一步</p>
+<p>git rm xxx<br>删除index中的文件</p>
+<p>git rm -r *<br>递归删除</p>
+<p>git log<br>显示提交日志</p>
+<p>git log -1<br>显示1行日志 -n为n行</p>
+<p>git log -5</p>
+<p>git log –stat<br>显示提交日志及相关变动文件</p>
+<p>git log -p -m</p>
+<p>git show dfb02e6e4f2f7b573337763e5c0013802e392818<br>显示某个提交的详细内容</p>
+<p>git show dfb02<br>可只用commitid的前几位</p>
+<p>git show HEAD<br>显示HEAD提交日志</p>
+<p>git show HEAD^<br>显示HEAD的父（上一个版本）的提交日志 ^^为上两个版本^5为上5个版本</p>
+<p>git tag<br>显示已存在的tag</p>
+<p>git tag -a v2.0 -m ‘xxx’<br>增加v2.0的tag</p>
+<p>git show v2.0<br>显示v2.0的日志及详细内容</p>
+<p>git log v2.0<br>显示v2.0的日志</p>
+<p>git diff<br>显示所有未添加至index的变更</p>
+<p>git diff –cached<br>显示所有已添加index但还未commit的变更</p>
+<p>git diff HEAD^<br>比较与上一个版本的差异</p>
+<p>git diff HEAD – ./lib<br>比较与HEAD版本lib目录的差异</p>
+<p>git diff origin/master..master<br>比较远程分支master上有本地分支master上没有的</p>
+<p>git diff origin/master..master –stat<br>只显示差异的文件，不显示具体内容</p>
+<p>git remote add origin git+ssh://git@192.168.53.168/VT.git<br>增加远程定义（用于push/pull/fetch）</p>
+<p>git branch<br>显示本地分支</p>
+<p>git branch –contains 50089<br>显示包含提交50089的分支</p>
+<p>git branch -a<br>显示所有分支</p>
+<p>git branch -r<br>显示所有原创分支</p>
+<p>git branch –merged<br>显示所有已合并到当前分支的分支</p>
+<p>git branch –no-merged<br>显示所有未合并到当前分支的分支</p>
+<p>git branch -m master master_copy<br>本地分支改名</p>
+<p>git checkout -b master_copy<br>从当前分支创建新分支master_copy并检出</p>
+<p>git checkout -b master master_copy<br>上面的完整版</p>
+<p>git checkout features/performance<br>检出已存在的features/performance分支</p>
+<p>git checkout –track hotfixes/BJVEP933<br>检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</p>
+<p>git checkout v2.0<br>检出版本v2.0</p>
+<p>git checkout -b devel origin/develop<br>从远程分支develop创建新本地分支devel并检出</p>
+<p>git checkout – README<br>检出head版本的README文件（可用于修改错误回退）</p>
+<p>git merge origin/master<br>合并远程master分支至当前分支</p>
+<p>git cherry-pick ff44785404a8e<br>合并提交ff44785404a8e的修改</p>
+<p>git push origin master<br>将当前分支push到远程master分支</p>
+<p>git push origin :hotfixes/BJVEP933<br>删除远程仓库的hotfixes/BJVEP933分支</p>
+<p>git push –tags<br>把所有tag推送到远程仓库</p>
+<p>git fetch<br>获取所有远程分支（不更新本地分支，另需merge）</p>
+<p>git fetch –prune<br>获取所有原创分支并清除服务器上已删掉的分支</p>
+<p>git pull origin master<br>获取远程分支master并merge到当前分支</p>
+<p>git mv README README2<br>重命名文件README为README2</p>
+<p>git reset –hard HEAD<br>将当前版本重置为HEAD（通常用于merge失败回退）</p>
+<p>git rebase</p>
+<p>git branch -d hotfixes/BJVEP933<br>删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）</p>
+<p>git branch -D hotfixes/BJVEP933<br>强制删除分支hotfixes/BJVEP933</p>
+<p>git ls-files<br>列出git index包含的文件</p>
+<p>git show-branch<br>图示当前分支历史</p>
+<p>git show-branch –all<br>图示所有分支历史</p>
+<p>git whatchanged<br>显示提交历史对应的文件修改</p>
+<p>git revert dfb02e6e4f2f7b573337763e5c0013802e392818<br>撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818</p>
+<p>git ls-tree HEAD<br>内部命令：显示某个&gt; git对象</p>
+<p>git rev-parse v2.0<br>内部命令：显示某个ref对于的SHA1 HASH</p>
+<p>git reflog<br>显示所有提交，包括孤立节点</p>
+<p>git show HEAD@{5}</p>
+<p>git show master@{yesterday}<br>显示master分支昨天的状态</p>
+<p>git log –pretty=format:’%h %s’ –graph<br>图示提交日志</p>
+<p>git show HEAD~3</p>
+<p>git show -s –pretty=raw 2be7fcb476</p>
+<p>git stash<br>暂存当前修改，将所有至为HEAD状态</p>
+<p>git stash list<br>查看所有暂存</p>
+<p>git stash show -p stash@{0}<br>参考第一次暂存</p>
+<p>git stash apply stash@{0}<br>应用第一次暂存</p>
+<p>git grep “delete from”<br>文件中搜索文本“delete from”</p>
+<p>git grep -e ‘&gt; define’ –and -e SORT_DIRENT</p>
+<p>git gc</p>
+<p>git fsck</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/git/">git</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-每周烧脑-1"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -145,7 +278,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/04/03/每周烧脑-1/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/04/03/每周烧脑-1/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             完美数完美数定义如下：
@@ -210,7 +343,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/03/15/百度网盘自定义提取码/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/8" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/03/15/百度网盘自定义提取码/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/1" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             请按照以下步骤进行操作：
@@ -270,7 +403,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/03/11/你所不知道的Host/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/3" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/03/11/你所不知道的Host/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/8" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             Hosts是什么？
@@ -521,6 +654,18 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2017/04/07/git命令集合/">git命令集合</a></h6>
+              <span>四月 7, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2017/04/03/每周烧脑-1/">每周烧脑-1</a></h6>
               <span>四月 3, 2017</span>
             </div>
@@ -584,7 +729,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/Github/">Github</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">poem</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/Github/">Github</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">poem</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -594,7 +739,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -604,7 +749,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 20px;">黑科技</a>
+      <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 20px;">黑科技</a>
     </div>
   </div>
 
@@ -614,7 +759,7 @@
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
