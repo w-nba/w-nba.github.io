@@ -18,7 +18,7 @@ body {
 	font-weight: 400;
 	font-family: Arial, Helvetica, Microsoft Yahei;
 	line-height: 1.8;
-	background: #fff;
+	background: rgba(0,0,0,0.1);
 	}
 
 /* Headings */
@@ -275,6 +275,7 @@ object {
 	font-family: "Yanone Kaffeesatz", "微软雅黑", Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	height:25px;
 	}
 
 /* MENU
@@ -1217,3 +1218,22 @@ body.search .page .entry-footer {
 	}
 @media screen and (max-width: 320px) {
 	}
+	
+/* top-bar  bottom-bar
+----------------------------------------------- */
+#top-bar,#bottom-bar{
+	background-image: url("/uploads/all.png");
+}
+#top-bar{
+	background-position:0 -632px; 
+	height:4px; 
+	font-size:0; 
+	width:20%; 
+	background-color:#F1F1F1;
+}
+#bottom-bar{
+	background-position:0 -632px; 
+	height:4px; 
+	font-size:0; 
+	background-color:#F1F1F1;
+}

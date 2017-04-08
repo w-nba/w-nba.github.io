@@ -65,7 +65,8 @@
   <body>
 
 
-  <header id="allheader" class="site-header" role="banner" style="background:url('/uploads/img-m.jpg') no-repeat center bottom">
+  <div id="top-bar"></div>
+<header id="allheader" class="site-header" role="banner" style="background:url('/uploads/img-m.jpg') no-repeat center bottom">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -78,7 +79,7 @@
           </h1>
 
           
-            <div class="site-description">少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。</div>
+            <div class="site-description"></div>
           
             
           <nav id="main-navigation" class="main-navigation" role="navigation">
@@ -145,7 +146,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/04/07/git命令集合/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/3" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/04/07/git命令集合/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/1" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             初始化本地git仓库（创建新仓库）git init    
@@ -208,7 +209,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/04/03/每周烧脑-1/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/04/03/每周烧脑-1/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/1" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             完美数完美数定义如下：
@@ -273,7 +274,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/03/15/百度网盘自定义提取码/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/1" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/03/15/百度网盘自定义提取码/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             请按照以下步骤进行操作：
@@ -333,7 +334,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/03/11/你所不知道的Host/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/10" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/03/11/你所不知道的Host/"><img width="250" height="175" src="http://lorempixel.com/500/350/city/8" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             Hosts是什么？
@@ -754,6 +755,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
       </div>
   </div>
 </footer>
+<div id="bottom-bar"></div>
 
 <!-- min height -->
 
@@ -761,6 +763,22 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
     var contentdiv = document.getElementById("content");
 
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+	
+	setTimeout(function(){
+		var hjs=document.createElement('script');
+		hjs.setAttribute('src','https://api.hitokoto.us:214/rand?encode=jsc&charset=utf-8&fun=save_hitokoto');
+		document.body.appendChild(hjs);
+	},100);
+
+	function save_hitokoto(response){
+		console.log(response);
+		credit = $('.site-description').html();
+		$('.site-description').attr("title",response.source + ' | ' + response.catname);
+		credit += response.hitokoto;
+		$('.site-description').html(credit);
+	}
+	
+		$("#top-bar").animate({width: "100%"},5000);
 </script>
     </div>
     <!-- <nav id="mobile-nav">

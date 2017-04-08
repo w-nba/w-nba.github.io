@@ -66,7 +66,8 @@
   <body>
 
 
-  <header id="allheader" class="site-header" role="banner" style="background:url('/uploads/img-m.jpg') no-repeat center bottom">
+  <div id="top-bar"></div>
+<header id="allheader" class="site-header" role="banner" style="background:url('/uploads/img-m.jpg') no-repeat center bottom">
   <div class="clearfix container">
       <div class="site-branding">
 
@@ -79,7 +80,7 @@
           </h1>
 
           
-            <div class="site-description">少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。</div>
+            <div class="site-description"></div>
           
             
           <nav id="main-navigation" class="main-navigation" role="navigation">
@@ -135,9 +136,9 @@
             
                 <a href="#git" title="git" rel="1">git</a>
             
-                <a href="#黑科技" title="黑科技" rel="2">黑科技</a>
-            
                 <a href="#诗词" title="诗词" rel="2">诗词</a>
+            
+                <a href="#黑科技" title="黑科技" rel="2">黑科技</a>
             
                 <a href="#Javascript" title="Javascript" rel="1">Javascript</a>
             
@@ -591,6 +592,7 @@
       </div>
   </div>
 </footer>
+<div id="bottom-bar"></div>
 
 <!-- min height -->
 
@@ -598,6 +600,22 @@
     var contentdiv = document.getElementById("content");
 
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+	
+	setTimeout(function(){
+		var hjs=document.createElement('script');
+		hjs.setAttribute('src','https://api.hitokoto.us:214/rand?encode=jsc&charset=utf-8&fun=save_hitokoto');
+		document.body.appendChild(hjs);
+	},100);
+
+	function save_hitokoto(response){
+		console.log(response);
+		credit = $('.site-description').html();
+		$('.site-description').attr("title",response.source + ' | ' + response.catname);
+		credit += response.hitokoto;
+		$('.site-description').html(credit);
+	}
+	
+		$("#top-bar").animate({width: "100%"},5000);
 </script>
     </div>
     <!-- <nav id="mobile-nav">
