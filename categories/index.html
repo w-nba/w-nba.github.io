@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="/css/bootstrap.css" >
   <link rel="stylesheet" href="/css/hiero.css" >
   <link rel="stylesheet" href="/css/glyphs.css" >
-
+  <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=jsc&fun=sync"></script>
 </head>
 
 <script>
@@ -556,7 +556,7 @@
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2017 石猴博客 All Rights Reserved		  
+	      &copy; 2017 石猴博客 All Rights Reserved,Modified by stonemonkey	  
       </div>
       <div class="site-credit">
 		
@@ -565,8 +565,6 @@
 			本站总访问量: <span id="busuanzi_value_site_pv" style="font-family:Georgia;color:#f00;"><i class="fa fa-spinner fa-spin"></i></span>次
 			&nbsp;&nbsp;
 			Theme byhiero
-			&nbsp;&nbsp;
-			Modified by stonemonkey
 		</span>
           
       </div>
@@ -580,14 +578,8 @@
     var contentdiv = document.getElementById("content");
 
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-	
-	setTimeout(function(){
-		var hjs=document.createElement('script');
-		hjs.setAttribute('src','https://api.hitokoto.us:214/rand?encode=jsc&charset=utf-8&fun=save_hitokoto');
-		document.body.appendChild(hjs);
-	},100);
 
-	function save_hitokoto(response){
+	function sync(response){
 		console.log(response);
 		credit = $('.site-description').html();
 		$('.site-description').attr("title",response.source + ' | ' + response.catname);
