@@ -1222,7 +1222,7 @@ body.search .page .entry-footer {
 /* top-bar  bottom-bar
 ----------------------------------------------- */
 #top-bar,#bottom-bar{
-	background-image: url("/uploads/all.png");
+	background-image: url("uploads/all.png");
 }
 #top-bar{
 	background-position:0 -632px; 
