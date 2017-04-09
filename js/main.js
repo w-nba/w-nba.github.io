@@ -60,3 +60,5 @@ $('#content').on('click', function(){
       $('#main-navigation').removeClass('main-navigation-open');
     }
   });
+
+$("#top-bar").animate({width: "100%"},6000);  

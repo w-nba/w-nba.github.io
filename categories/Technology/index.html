@@ -43,7 +43,6 @@
   <link rel="stylesheet" href="/css/bootstrap.css" >
   <link rel="stylesheet" href="/css/hiero.css" >
   <link rel="stylesheet" href="/css/glyphs.css" >
-  <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=jsc&fun=sync"></script>
 </head>
 
 <script>
@@ -467,21 +466,24 @@
 <div id="bottom-bar"></div>
 
 <!-- min height -->
-
 <script>
     var contentdiv = document.getElementById("content");
 
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-
-	function sync(response){
+</script>
+<script type="text/javascript">
+	setTimeout(function(){
+		var hjs=document.createElement('script');
+		hjs.setAttribute('src','http://api.hitokoto.us/rand?encode=jsc&fun=async');
+		document.body.appendChild(hjs);
+	},100);
+	function async(response){
 		console.log(response);
 		credit = $('.site-description').html();
 		$('.site-description').attr("title",response.source + ' | ' + response.catname);
 		credit += response.hitokoto;
 		$('.site-description').html(credit);
 	}
-	
-		$("#top-bar").animate({width: "100%"},6000);
 </script>
     </div>
     <!-- <nav id="mobile-nav">
