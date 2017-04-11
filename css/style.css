@@ -152,12 +152,12 @@ body {
   transition: visibility 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 @media screen and (max-width: 479px) {
-  z-index: 1000 {
+  #rocket {
     right: 12px;
     bottom: 20px;
   }
 }
-z-index: 1000 #rocket i {
+#rocket #rocket i {
   display: block;
   margin-top: 48px;
   height: 14px;
