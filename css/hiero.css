@@ -354,7 +354,7 @@ object {
 	font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	line-height: 60px;
+	line-height: 45px;
 	}
 #main-navigation li:first-child a{
 		padding-left:0;
