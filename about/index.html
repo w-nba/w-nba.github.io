@@ -90,7 +90,6 @@
             <a class="nav-open">Menu</a>
             <a class="nav-close">Close</a>
             <div class="clearfix sf-menu">
-
               <ul id="main-nav" class="nmenu sf-js-enabled">
                     
                       <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
@@ -115,8 +114,6 @@
       </div>
   </div>
 </header>
-
-
 
 
   <div id="container">
@@ -151,6 +148,19 @@
             
       <div id="content" class="outer">
         
+		  <div class="site-header-image">
+			<img id="originBg" width="100%" alt="石猴博客" src="">
+		  </div>
+		  <script>
+				var imgUrls = "css/images/pose.jpg,css/images/pose.jpg".split(",");
+				var random = Math.floor((Math.random() * imgUrls.length ));
+				if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+				  document.getElementById("originBg").src=imgUrls[random];
+				} else {
+				  document.getElementById("originBg").src='/' + imgUrls[random];
+				}
+		  </script>
+		
       </div>
     </div>
   </div>
