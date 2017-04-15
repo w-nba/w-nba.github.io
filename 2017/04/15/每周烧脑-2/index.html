@@ -134,7 +134,7 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://mail.hichina.com/attachment/downloadex?ri=%2Falimail%2FinternalLinks%2FrefreshToken&o=1&et=normal&f=68470351-e0c6-4a4e-a9a2-341831dd3984&e=wangpeng%40admixture.com.cn&n=temp4cj.png&m=2_0%3ADzzzzyb1dVh%24---.7xLdNbY&ext=png" rel="gallery_cj1j7kh8d0009ukakkk8dlc1j">
+      <a class="article-gallery-img fancybox" href="http://mail.hichina.com/attachment/downloadex?ri=%2Falimail%2FinternalLinks%2FrefreshToken&o=1&et=normal&f=68470351-e0c6-4a4e-a9a2-341831dd3984&e=wangpeng%40admixture.com.cn&n=temp4cj.png&m=2_0%3ADzzzzyb1dVh%24---.7xLdNbY&ext=png" rel="gallery_cj1jam77r000cm4ak4xdnaloe">
         <img src="http://mail.hichina.com/attachment/downloadex?ri=%2Falimail%2FinternalLinks%2FrefreshToken&o=1&et=normal&f=68470351-e0c6-4a4e-a9a2-341831dd3984&e=wangpeng%40admixture.com.cn&n=temp4cj.png&m=2_0%3ADzzzzyb1dVh%24---.7xLdNbY&ext=png" itemprop="image">
       </a>
     
@@ -253,22 +253,13 @@
 <!-- min height -->
 <script>
     var contentdiv = document.getElementById("content");
-
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-</script>
-<script type="text/javascript">
-	setTimeout(function(){
-		var hjs=document.createElement('script');
-		hjs.setAttribute('src','http://api.hitokoto.us/rand?encode=jsc&fun=async');
-		document.body.appendChild(hjs);
-	},100);
-	function async(response){
-		console.log(response);
-		credit = $('.site-description').html();
-		$('.site-description').attr("title",response.source + ' | ' + response.catname);
-		credit += response.hitokoto;
-		$('.site-description').html(credit);
-	}
+	$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
+	   console.log(JSON.parse(data))
+	   var dataJSON = JSON.parse(data)
+       $('.site-description').attr("title",dataJSON.from);
+	   $('.site-description').html(dataJSON.hitokoto);
+	});
 </script>
     </div>
     <!-- <nav id="mobile-nav">
