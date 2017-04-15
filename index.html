@@ -122,6 +122,53 @@
         
           <section id="main">
   
+    <article id="post-每周烧脑-2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/15/每周烧脑-2/">每周烧脑-2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	发表于 <a href="/2017/04/15/每周烧脑-2/" class="article-date">
+	  <time datetime="2017-04-15T11:47:50.000Z" itemprop="datePublished">四月 15, 2017</time>
+	</a>
+
+	   
+    </div>
+    <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/15/每周烧脑-2/' " >
+      
+        <p>如图所示，有一堵由高度相同但长度不同的砖块砌成的墙，墙的每一层的总长度相同。你需要从上到下画一条垂线，使得这条线切断的砖块最少（注意，不可以在最左或最右边画线），并返回被切断的砖的数量。</p>
+<p>输入的数据是一个数组的数组，每一个子数组代表一层，元素是这一层从左到右每块砖的长度。如上图的输入是：<br>[[1,2,2,1], [3,1,2], [1,3,2], [2,4], [3,1,2], [1,3,1,1]]<br>输出是2</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> splitWall = <span class="function"><span class="keyword">function</span>(<span class="params">wall</span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> sum = [],sameArr = [],count = <span class="number">0</span>,same = <span class="number">0</span>;     <span class="comment">//sum由每个数组累加的和的值组成，sameArr由累加和相同的数组的个数组成，count为累加和，same为累加和相同的数组的个数;</span></div><div class="line"></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;wall.length;i++)&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;wall[i].length<span class="number">-1</span>;j++)&#123;</div><div class="line">			count = count+wall[i][j];			</div><div class="line">			sum.push(count);</div><div class="line">		&#125;</div><div class="line">		count = <span class="number">0</span>;	</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;sum.length<span class="number">-1</span>;i++)&#123;</div><div class="line">		<span class="keyword">var</span> sumNew = sum.sort();	</div><div class="line">		<span class="keyword">if</span>(sumNew[i] == sumNew[i+<span class="number">1</span>] &amp;&amp; sumNew[i] == sumNew[i<span class="number">-1</span>])&#123;</div><div class="line">			same++;</div><div class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(sumNew[i] != sumNew[i+<span class="number">1</span>] &amp;&amp; sumNew[i] != sumNew[i<span class="number">-1</span>])&#123;</div><div class="line">			same = <span class="number">0</span>;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			same = <span class="number">2</span>;	</div><div class="line">		&#125;</div><div class="line">		sameArr.push(same);</div><div class="line">	&#125;</div><div class="line">	same = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, sameArr);</div><div class="line">	<span class="keyword">var</span> diff = wall.length - same;</div><div class="line">	<span class="keyword">return</span> diff;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>],[<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">3</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">3</span>],[<span class="number">6</span>],[<span class="number">3</span>,<span class="number">3</span>]];  </div><div class="line">alert(splitWall(arr));</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-git命令集合"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -575,6 +622,21 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
             
               <div class="widget-entry-thumbnail">
+                <a href="/2017/04/15/每周烧脑-2/" title=""><img width="50" height="50" src="http://mail.hichina.com/attachment/downloadex?ri=%2Falimail%2FinternalLinks%2FrefreshToken&amp;o=1&amp;et=normal&amp;f=68470351-e0c6-4a4e-a9a2-341831dd3984&amp;e=wangpeng%40admixture.com.cn&amp;n=temp4cj.png&amp;m=2_0%3ADzzzzyb1dVh%24---.7xLdNbY&amp;ext=png" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+              </div>
+              <div class="widget-entry-summary">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/04/15/每周烧脑-2/">每周烧脑-2</a></h6>
+              <span>四月 15, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-thumbnail">
                 <a href="/2017/04/07/git命令集合/" title=""><img width="50" height="50" src="/postImg/1.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
@@ -643,18 +705,6 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/03/11/满江红·写怀/">满江红·写怀</a></h6>
-              <span>三月 11, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -664,7 +714,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/Github/">Github</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">poem</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/Github/">Github</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">poem</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -674,7 +724,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -684,7 +734,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 20px;">黑科技</a>
+      <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/诗词/" style="font-size: 20px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 20px;">黑科技</a>
     </div>
   </div>
 
@@ -694,7 +744,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
