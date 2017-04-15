@@ -519,9 +519,8 @@
     var contentdiv = document.getElementById("content");
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
 	$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
-	   console.log(JSON.parse(data))
-	   var dataJSON = JSON.parse(data)
-       $('.site-description').attr("title",dataJSON.from);
+	   var dataJSON = JSON.parse(data);
+       $('.site-description').attr("title",dataJSON.from+"|"+dataJSON.creator);
 	   $('.site-description').html(dataJSON.hitokoto);
 	});
 </script>

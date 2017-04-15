@@ -137,7 +137,7 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj1jam76u0002m4akzof1h57f">
+      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj1jb9ze80001tcak0mrbw8a2">
         <img src="/postImg/1.jpg" itemprop="image">
       </a>
     
@@ -354,9 +354,8 @@ git fsck
     var contentdiv = document.getElementById("content");
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
 	$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
-	   console.log(JSON.parse(data))
-	   var dataJSON = JSON.parse(data)
-       $('.site-description').attr("title",dataJSON.from);
+	   var dataJSON = JSON.parse(data);
+       $('.site-description').attr("title",dataJSON.from+"|"+dataJSON.creator);
 	   $('.site-description').html(dataJSON.hitokoto);
 	});
 </script>
