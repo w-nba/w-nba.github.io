@@ -70,21 +70,24 @@ $('#content').on('click', function(){
 $("#top-bar").animate({width: "100%"},6000);  
 
 setTimeout(function(){
-		$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
-		   var dataJSON = JSON.parse(data);
-		   $('.site-description').attr("title",dataJSON.from+"|"+dataJSON.creator);
-		   $('.site-description').html(dataJSON.hitokoto);
-		});
-	},200)
+	$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
+	   var dataJSON = JSON.parse(data);
+	   $('.site-description').attr("title",dataJSON.from+"|"+dataJSON.creator);
+	   $('.site-description').html(dataJSON.hitokoto);
+	});
+},200)
 //给标签云添加颜色
-if(document.getElementById("randColor1") || document.getElementById("randColor2")){
+if(document.getElementById("randColor1")){
 	var a = document.getElementById("randColor1").getElementsByTagName("a");
-	var b = document.getElementById("randColor2").getElementsByTagName("a");
 	for(var i = 0;i<a.length;i++){
 		a[i].style.color = rgb();
 	}
+}
+if(document.getElementById("randColor2")){
+	var b = document.getElementById("randColor2").getElementsByTagName("a");
 	for(var i = 0;i<b.length;i++){
 		b[i].style.color = rgb();
+		console.log("b")
 	}
 }
 function rgb(){
