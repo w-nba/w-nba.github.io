@@ -242,11 +242,29 @@
 <script>
     var contentdiv = document.getElementById("content");
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-	$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
-	   var dataJSON = JSON.parse(data);
-       $('.site-description').attr("title",dataJSON.from+"|"+dataJSON.creator);
-	   $('.site-description').html(dataJSON.hitokoto);
-	});
+	setTimeout(function(){
+		$.get("https://sslapi.hitokoto.cn/?encode=json",function(data,status){
+		   var dataJSON = JSON.parse(data);
+		   $('.site-description').attr("title",dataJSON.from+"|"+dataJSON.creator);
+		   $('.site-description').html(dataJSON.hitokoto);
+		});
+	},200)
+	//给标签云添加颜色
+	if(document.getElementById("randColor1")){
+		var a = document.getElementById("randColor1").getElementsByTagName("a");
+		var b = document.getElementById("randColor2").getElementsByTagName("a");
+		for(var i = 0;i<a.length;i++){
+			a[i].style.color = rgb();
+			b[i].style.color = rgb();
+		}
+	}
+	function rgb(){
+		var r=Math.floor(Math.random()*255);
+		var g=Math.floor(Math.random()*255);
+		var b=Math.floor(Math.random()*255);
+		var rgb='rgb('+r+','+g+','+b+')';
+		return rgb;
+	}
 </script>
     </div>
     <!-- <nav id="mobile-nav">

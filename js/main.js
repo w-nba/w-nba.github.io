@@ -68,20 +68,3 @@ $('#content').on('click', function(){
   });
 
 $("#top-bar").animate({width: "100%"},6000);  
-
-
-if(document.getElementById("randColor1")){
-	var a = document.getElementById("randColor1").getElementsByTagName("a");
-	var b = document.getElementById("randColor2").getElementsByTagName("a");
-	for(var i = 0;i<a.length;i++){
-		a[i].style.color = rgb();
-		b[i].style.color = rgb();
-	}
-}
-function rgb(){
-	var r=Math.floor(Math.random()*255);
-	var g=Math.floor(Math.random()*255);
-	var b=Math.floor(Math.random()*255);
-	var rgb='rgb('+r+','+g+','+b+')';
-	return rgb;
-}
