@@ -963,7 +963,8 @@ a.article-title:hover {
   margin: 1em;
   line-height: 1.8em;
   height: 500px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .nav li a:hover,
 .nav list-style-type none a:hover {
