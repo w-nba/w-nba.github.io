@@ -151,7 +151,7 @@ function findWeather(wz) {
 		if (new Date().getHours() > 17) {
 		  _f = _w.f2 + "_1.png";
 		}
-		var img = "<img width='16px' height='16px' src='http://i2.sinaimg.cn/dy/main/weather/weatherplugin/wthIco/20_20/" + _f
+		var img = "<img width='18px' height='18px' src='http://i2.sinaimg.cn/dy/main/weather/weatherplugin/wthIco/20_20/" + _f
 	+ "' />";
 		var tq = citytq + " &nbsp;&nbsp;" + img + " " + _w.s1 + " &nbsp;&nbsp;" + _w.t2 + "℃~" + _w.t1 + "℃ &nbsp;&nbsp;" + _w.d1 + _w.p1 + "级";
 		$('#weather').html(tq);
