@@ -97,3 +97,66 @@ function rgb(){
 	var rgb='rgb('+r+','+g+','+b+')';
 	return rgb;
 }
+
+function showLocale(objD) {
+  var str, colorhead, colorfoot;
+  var yy = objD.getYear();
+  if (yy < 1900) yy = yy + 1900;
+  var MM = objD.getMonth() + 1;
+  if (MM < 10) MM = '0' + MM;
+  var dd = objD.getDate();
+  if (dd < 10) dd = '0' + dd;
+  var hh = objD.getHours();
+  if (hh < 10) hh = '0' + hh;
+  var mm = objD.getMinutes();
+  if (mm < 10) mm = '0' + mm;
+  var ss = objD.getSeconds();
+  if (ss < 10) ss = '0' + ss;
+  var ww = objD.getDay();
+  if (ww == 0) colorhead = "";
+  if (ww > 0 && ww < 6) colorhead = "";
+  if (ww == 6) colorhead = "";
+  if (ww == 0) ww = "星期日";
+  if (ww == 1) ww = "星期一";
+  if (ww == 2) ww = "星期二";
+  if (ww == 3) ww = "星期三";
+  if (ww == 4) ww = "星期四";
+  if (ww == 5) ww = "星期五";
+  if (ww == 6) ww = "星期六";
+  colorfoot = ""
+  str = colorhead + yy + "-" + MM + "-" + dd + " &nbsp;&nbsp;" + hh + ":" + mm + ":" + ss + " &nbsp;&nbsp;" + ww + colorfoot;
+  return (str);
+}
+function tick() {
+  var today;
+  today = new Date();
+  document.getElementById("sj").innerHTML = showLocale(today);
+  window.setTimeout("tick()", 1000);
+}
+tick();
+
+
+function findWeather(wz) {
+  var cityUrl = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js';
+  $.getScript(cityUrl, function (script, textStatus, jqXHR) {
+	var citytq = remote_ip_info.city; // 获取城市
+	var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&day=0&dfc=3";
+	$.ajax({
+	  url: url,
+	  dataType: "script",
+	  scriptCharset: "gbk",
+	  success: function (data) {
+		var _w = window.SWther.w[citytq][0];
+		var _f = _w.f1 + "_0.png";
+		if (new Date().getHours() > 17) {
+		  _f = _w.f2 + "_1.png";
+		}
+		var img = "<img width='16px' height='16px' src='http://i2.sinaimg.cn/dy/main/weather/weatherplugin/wthIco/20_20/" + _f
+	+ "' />";
+		var tq = citytq + " &nbsp;&nbsp;" + img + " " + _w.s1 + " &nbsp;&nbsp;" + _w.t2 + "℃~" + _w.t1 + "℃ &nbsp;&nbsp;" + _w.d1 + _w.p1 + "级";
+		$('#weather').html(tq);
+	  }
+	});
+  });
+}
+findWeather();
