@@ -46,23 +46,23 @@
 </head>
 
 <script>
- var themeMenus = {};
- 
-   themeMenus["/"] = "首页"; 
- 
-   themeMenus["/archives"] = "归档"; 
- 
-   themeMenus["/categories"] = "分类"; 
- 
-   themeMenus["/tags"] = "标签"; 
- 
-   themeMenus["/about"] = "关于"; 
- 
-   themeMenus["/works"] = "我的作品"; 
- 
-   themeMenus["/bbs"] = "留言板"; 
- 
-</script> 
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+  themeMenus["/works"] = "我的作品"; 
+
+  themeMenus["/bbs"] = "留言板"; 
+
+</script>
 
 
   <body>
@@ -115,6 +115,26 @@
 </header>
 
 
+  <div style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+      var imgUrls = "css/images/pose.jpg,css/images/pose.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  </script>
+
+
+
   <div id="container">
     <div id="wrap">
             
@@ -142,7 +162,7 @@
 	  <time datetime="2017-04-27T11:51:14.000Z" itemprop="datePublished">四月 27, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/27/手机横屏/' " >
       
@@ -150,7 +170,7 @@
 
           
             <div class="entry-thumbnail">
-              <a href="/2017/04/27/手机横屏/"><img width="250" height="175" src="https://lorempixel.com/500/350/city/7" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+              <a href="/2017/04/27/手机横屏/"><img width="250" height="175" src="https://lorempixel.com/500/350/city/9" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
             </div>
             <div class="entry-summary">
             页面打开，直接横屏显示。&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;	&lt;meta charset=&quot;UTF-8&quot;&gt;	&lt;title&gt;手机强制横屏&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;ma...
@@ -201,7 +221,7 @@
 	  <time datetime="2017-04-15T11:47:50.000Z" itemprop="datePublished">四月 15, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/15/每周烧脑-2/' " >
       
@@ -258,7 +278,7 @@
 	  <time datetime="2017-04-07T14:09:51.000Z" itemprop="datePublished">四月 7, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/07/git命令集合/' " >
       
@@ -318,7 +338,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 	  <time datetime="2017-04-02T16:29:49.000Z" itemprop="datePublished">四月 3, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/03/每周烧脑-1/' " >
       
@@ -380,7 +400,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 	  <time datetime="2017-03-15T15:25:00.000Z" itemprop="datePublished">三月 15, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/15/百度网盘自定义提取码/' " >
       
@@ -437,7 +457,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 	  <time datetime="2017-03-11T13:37:38.000Z" itemprop="datePublished">三月 11, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/你所不知道的Host/' " >
       
@@ -498,7 +518,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 	  <time datetime="2017-03-11T09:12:49.000Z" itemprop="datePublished">三月 11, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/六州歌头·少年侠气/' " >
       
@@ -544,7 +564,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 	  <time datetime="2017-03-11T05:04:41.000Z" itemprop="datePublished">三月 11, 2017</time>
 	</a>
 
-	   
+      
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/满江红·写怀/' " >
       
@@ -637,41 +657,41 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
     	<ul class="clearfix widget-social-icons">   
     	
-   			
-      			  <li><a href="https://github.com/w-nba" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="https://github.com/w-nba" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="http://www.yoursite.com" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="http://www.yoursite.com" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="null" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="null" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="null" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="null" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="null" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="null" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="null" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="null" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="null" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="null" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-      			  <li><a href="null" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
-           
+          
+     			  <li><a href="null" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
+          
    		
-   			
-             <li><a href="mailto:null?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
-           
+          
+            <li><a href="mailto:null?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
+          
    		
    		</ul>
 
@@ -876,17 +896,17 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2017 石猴博客 All Rights Reserved,Modified by stonemonkey	  
+	      &copy; 2017 石猴博客 All Rights Reserved,Modified by stonemonkey
       </div>
       <div class="site-credit">
 		
              <span id="busuanzi_container_site_pv" style="font-size: 12px;">
-		    <i class="fa fa-bar-chart fa-bar-chart-o"></i>
-			本站总访问量: <span id="busuanzi_value_site_pv" style="font-family:Georgia;color:#f00;"><i class="fa fa-spinner fa-spin fa-pulse"></i></span>次
-			&nbsp;&nbsp;
-			Theme byhiero
-		</span>
-          
+                <i class="fa fa-bar-chart fa-bar-chart-o"></i>
+              本站总访问量: <span id="busuanzi_value_site_pv" style="font-family:Georgia;color:#f00;"><i class="fa fa-spinner fa-spin fa-pulse"></i></span>次
+              &nbsp;&nbsp;
+              Theme byhiero
+		         </span>
+      
       </div>
   </div>
 </footer>
@@ -967,13 +987,15 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
 
 
- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
- </script>
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
 
 
 
 
  
+
   </div>
 
   <a id="rocket" href="#top" class="" style="z-index:1000"></a>
