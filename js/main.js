@@ -140,21 +140,26 @@ tick();
 
 
 function findWeather(wz) {
-  var cityUrl = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js';
-  $.getScript(cityUrl, function (script, textStatus, jqXHR) {
-	var citytq = remote_ip_info.city; // 获取城市
-	var url = "http://wthrcdn.etouch.cn/weather_mini?city=" + citytq;
-	$.ajax({
-	  url: url,
-	  dataType: "json",
-	  scriptCharset: "gbk",
-	  success: function (data) {
-		var res = data.data.forecast[0];
-		
-		var tq = citytq + " &nbsp;" +res.type+" &nbsp;"+ " " + res.fengxiang+" "+res.fengli + " &nbsp;" + res.high.substr(-4) + "~" + res.low.substr(-4);
-		$('#weather').html(tq);
-	  }
-	});
-  });
+	if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(showPosition);
+		var url = "https://free-api.heweather.com/v5/weather?city="+lon+","+lat+"&key=479bf339299547919c468d2800506c62";
+		$.ajax({
+		  url: url,
+		  dataType: "json",
+		  scriptCharset: "gbk",
+		  success: function (data) {
+			var res = data.HeWeather5[0];
+			var img = "<img src='https://cdn.heweather.com/cond_icon/'+res.daily_forecast[0].cond.code_n+'.png'/>"
+			var tq = res.basic.city + " &nbsp;" +res.daily_forecast[0].cond.txt_n+"&nbsp;"+ "PM2.5" + res.aqi.city.pm25+" "+res.aqi.city.qlty + " &nbsp;" + res.daily_forecast[0].tmp.max + "℃~" + res.daily_forecast[0].tmp.min + "℃" +res.daily_forecast[0].wind.dir+" "+res.daily_forecast[0].wind.sc;
+			$('#weather').html(tq);
+		  }
+		});
+	}else{
+		alert("Geolocation is not supported by this browser.");
+	}
+	function showPosition(position){
+		var lat  = position.coords.latitude;
+		var lon = position.coords.longitude;
+	}
 }
 findWeather();
