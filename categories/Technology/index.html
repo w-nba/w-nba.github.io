@@ -520,7 +520,9 @@ var themeMenus = {};
 <script>
     var contentdiv = document.getElementById("content");
     contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+	
 	var lunar = calendar.solar2lunar();
+	console.log(lunar)
 	var str = lunar.IMonthCn+lunar.IDayCn;
 	document.getElementById("sj").innerHTML = document.getElementById("sj").innerHTML+" &nbsp;"+str;
 </script>
