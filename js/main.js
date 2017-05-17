@@ -140,49 +140,28 @@ tick();
 
 
 function findWeather(wz) {
-	$.ajax({
-	  url: 'https://api.seniverse.com/v3/weather/now.json?key=pko2ey9mmcpbftoq&location=ip',
-	  dataType: "json",
-	  scriptCharset: "gbk",
-	  success: function (data) {
-		var city = data.results[0].location.name;
-
-		if (navigator.geolocation){
-			navigator.geolocation.getCurrentPosition(function(position){
-				var lat  = position.coords.latitude;
-				var lon = position.coords.longitude;
-				var url1 = "https://free-api.heweather.com/v5/weather?city="+lon+","+lat+"&key=479bf339299547919c468d2800506c62";
-				$.ajax({
-				  url: url1,
-				  dataType: "json",
-				  scriptCharset: "gbk",
-				  success: function (data) {
-					var res = data.HeWeather5[0];
-					console.log(res)
-					var src = "https://cdn.heweather.com/cond_icon/" + res.daily_forecast[0].cond.code_n + ".png";
-					var img = "<img src=\"" + src + "\"/>";
-					var tq = res.basic.city + "&nbsp;" +res.daily_forecast[0].cond.txt_n+img+"&nbsp;"+ "PM2.5&nbsp;&nbsp;" + res.aqi.city.pm25+" "+res.aqi.city.qlty + " &nbsp;" + res.daily_forecast[0].tmp.max + "℃~" + res.daily_forecast[0].tmp.min + "℃&nbsp;" +res.daily_forecast[0].wind.dir+" "+res.daily_forecast[0].wind.sc;
-					$('#weather').html(tq);
-				  }
-				});
-			});
-		}else{
-			var url2 = "https://free-api.heweather.com/v5/weather?city="+city+"&key=479bf339299547919c468d2800506c62";
+	if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(function(position){
+			var lat  = position.coords.latitude;
+			var lon = position.coords.longitude;
+			var url = "https://free-api.heweather.com/v5/weather?city="+lon+","+lat+"&key=479bf339299547919c468d2800506c62";
 			$.ajax({
-			  url: url2,
+			  url: url,
 			  dataType: "json",
 			  scriptCharset: "gbk",
 			  success: function (data) {
 				var res = data.HeWeather5[0];
 				console.log(res)
 				var src = "https://cdn.heweather.com/cond_icon/" + res.daily_forecast[0].cond.code_n + ".png";
-				var img = "<img src=\"" + src + "\"/>";
+				var img = "<img width=\"16px\" src=\"" + src + "\"/>";
+				img.style.marginTop = 5 +"px";
 				var tq = res.basic.city + "&nbsp;" +res.daily_forecast[0].cond.txt_n+img+"&nbsp;"+ "PM2.5&nbsp;&nbsp;" + res.aqi.city.pm25+" "+res.aqi.city.qlty + " &nbsp;" + res.daily_forecast[0].tmp.max + "℃~" + res.daily_forecast[0].tmp.min + "℃&nbsp;" +res.daily_forecast[0].wind.dir+" "+res.daily_forecast[0].wind.sc;
 				$('#weather').html(tq);
 			  }
 			});
-		}
-	  }
-	});
+		});
+	}else{
+		alert("Geolocation is not supported by this browser.");
+	}
 }
 findWeather();
