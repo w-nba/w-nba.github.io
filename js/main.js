@@ -133,7 +133,9 @@ function showLocale(objD) {
 function tick() {
   var today;
   today = new Date();
-  document.getElementById("sj").innerHTML = showLocale(today);
+  var lunar = calendar.solar2lunar();
+  var str = lunar.IMonthCn+lunar.IDayCn;
+  document.getElementById("sj").innerHTML = showLocale(today)+" &nbsp;"+str;
   window.setTimeout("tick()", 1000);
 }
 tick();
