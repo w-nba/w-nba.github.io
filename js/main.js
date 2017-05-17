@@ -90,7 +90,6 @@ if(document.getElementById("randColor2")){
 	var b = document.getElementById("randColor2").getElementsByTagName("a");
 	for(var i = 0;i<b.length;i++){
 		b[i].style.color = rgb();
-		console.log("b")
 	}
 }
 function rgb(){
