@@ -141,25 +141,25 @@ tick();
 
 function findWeather(wz) {
 	if (navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(showPosition);
-		var url = "https://free-api.heweather.com/v5/weather?city="+lon+","+lat+"&key=479bf339299547919c468d2800506c62";
-		$.ajax({
-		  url: url,
-		  dataType: "json",
-		  scriptCharset: "gbk",
-		  success: function (data) {
-			var res = data.HeWeather5[0];
-			var img = "<img src='https://cdn.heweather.com/cond_icon/'+res.daily_forecast[0].cond.code_n+'.png'/>"
-			var tq = res.basic.city + " &nbsp;" +res.daily_forecast[0].cond.txt_n+"&nbsp;"+ "PM2.5" + res.aqi.city.pm25+" "+res.aqi.city.qlty + " &nbsp;" + res.daily_forecast[0].tmp.max + "℃~" + res.daily_forecast[0].tmp.min + "℃" +res.daily_forecast[0].wind.dir+" "+res.daily_forecast[0].wind.sc;
-			$('#weather').html(tq);
-		  }
+		navigator.geolocation.getCurrentPosition(function(position){
+			var lat  = position.coords.latitude;
+			var lon = position.coords.longitude;
+			var url = "https://free-api.heweather.com/v5/weather?city="+lon+","+lat+"&key=479bf339299547919c468d2800506c62";
+			$.ajax({
+			  url: url,
+			  dataType: "json",
+			  scriptCharset: "gbk",
+			  success: function (data) {
+				var res = data.HeWeather5[0];
+				console.log(res)
+				var img = "<img src='https://cdn.heweather.com/cond_icon/'+res.daily_forecast[0].cond.code_n+'.png'/>"
+				var tq = res.basic.city + " &nbsp;" +res.daily_forecast[0].cond.txt_n+"&nbsp;"+ "PM2.5&nbsp;&nbsp;" + res.aqi.city.pm25+" "+res.aqi.city.qlty + " &nbsp;" + res.daily_forecast[0].tmp.max + "℃~" + res.daily_forecast[0].tmp.min + "℃&nbsp;&nbsp;" +res.daily_forecast[0].wind.dir+" "+res.daily_forecast[0].wind.sc;
+				$('#weather').html(tq);
+			  }
+			});
 		});
 	}else{
 		alert("Geolocation is not supported by this browser.");
-	}
-	function showPosition(position){
-		var lat  = position.coords.latitude;
-		var lon = position.coords.longitude;
 	}
 }
 findWeather();
