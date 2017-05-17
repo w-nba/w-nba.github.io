@@ -154,7 +154,8 @@ function findWeather(wz) {
 				console.log(res)
 				var src = "https://cdn.heweather.com/cond_icon/" + res.daily_forecast[0].cond.code_n + ".png";
 				var img = "<img width=\"16px\" src=\"" + src + "\"/>";
-				img.style.marginTop = 5 +"px";
+				img.style.position = "relative";
+				img.style.top = 5+"px";
 				var tq = res.basic.city + "&nbsp;" +res.daily_forecast[0].cond.txt_n+img+"&nbsp;"+ "PM2.5&nbsp;&nbsp;" + res.aqi.city.pm25+" "+res.aqi.city.qlty + " &nbsp;" + res.daily_forecast[0].tmp.max + "℃~" + res.daily_forecast[0].tmp.min + "℃&nbsp;" +res.daily_forecast[0].wind.dir+" "+res.daily_forecast[0].wind.sc;
 				$('#weather').html(tq);
 			  }
