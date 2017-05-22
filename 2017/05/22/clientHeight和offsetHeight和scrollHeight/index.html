@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>clientheight和offsetheight和scrollheight的区别 | 石猴博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="Javascript" />
+  
+  
+  
+  
+  <meta name="description" content="clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="clientHeight和offsetHeight和scrollHeight的区别">
+<meta property="og:url" content="http://stonemonkey.top/2017/05/22/clientHeight和offsetHeight和scrollHeight/index.html">
+<meta property="og:site_name" content="石猴博客">
+<meta property="og:description" content="clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度">
+<meta property="og:image" content="http://stonemonkey.top/postImg/1.jpg">
+<meta property="og:updated_time" content="2017-05-22T12:41:48.184Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="clientHeight和offsetHeight和scrollHeight的区别">
+<meta name="twitter:description" content="clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度">
+<meta name="twitter:image" content="http://stonemonkey.top/postImg/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
+  
+  <link rel="icon" href="/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/categories"] = "分类"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/works"] = "我的作品"; 
+
+  themeMenus["/bbs"] = "留言板"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <div id="top-bar"></div>
+<header id="allheader" class="site-header" role="banner" style="background-image:url('/uploads/img-m.jpg')">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" rel="home">
+                <img style="margin-bottom: 10px;border-radius:124px"  width="124px" height="124px" alt="石猴博客" src=" /uploads/ggg.png">
+              </a>
+            
+          </h1>
+
+          
+            <div class="site-description"></div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/works">我的作品</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/bbs">留言板</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-clientHeight和offsetHeight和scrollHeight" style="width: 660px; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj304fu3f0001d4ak2kuy1csx">
+        <img src="/postImg/1.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      clientHeight和offsetHeight和scrollHeight的区别
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	发表于 <a href="/2017/05/22/clientHeight和offsetHeight和scrollHeight/" class="article-date">
+	  <time datetime="2017-05-22T12:39:19.000Z" itemprop="datePublished">五月 22, 2017</time>
+	</a>
+
+      
+ 	<span id="busuanzi_container_page_pv">
+ 	  本文总阅读量<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>次
+ 	</span>
+ 
+    </div>
+    <div class="article-entry" itemprop="articleBody"  >
+      
+        <h4 id="clientHeight"><a href="#clientHeight" class="headerlink" title="clientHeight"></a>clientHeight</h4><p>大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h5 id="offsetHeight"><a href="#offsetHeight" class="headerlink" title="offsetHeight"></a>offsetHeight</h5><p>在IE6，IE7，IE8， IE9以及最新的的FF, Chrome中，对于一般元素，都是</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + height + border = clientHeight + 滚动条 + 边框</div></pre></td></tr></table></figure>
+<h5 id="scrollHeight"><a href="#scrollHeight" class="headerlink" title="scrollHeight"></a>scrollHeight</h5><p>scrollHeight的争议比较大，有些浏览器认为scrollHeight可以小于clientHeight，有些认为scrollHeight至少应该等于clientHeight。但有一点是一样的，就是</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">scrollHeight &gt;= topPadding + bottomPadding + 内容margin box的高度</div></pre></td></tr></table></figure>
+<p>在浏览器中的区别在于：</p>
+<p>==IE6、IE7 认为scrollHeight 是内容高度，可以小于clientHeight==。</p>
+<p>==FF 认为scrollHeight 是内容高度，不过最小值是clientHeight。==</p>
+<p>注： 以上都是对于一般元素而言的，body和documentElement的clientHeight, offsetHeight和scrollHeight在各个浏览器中的计算方式又不同。</p>
+<p>==在所有的浏览器中，如果你想获取<strong>视窗可见部分</strong>的高度，应该使用<strong>documentElement.clientHeight</strong>，因为<strong>body.clientHeight</strong>是由它的<strong>内容</strong>决定的。==</p>
+<h3 id="FF30"><a href="#FF30" class="headerlink" title="==FF30=="></a><strong>==FF30==</strong></h3><p>注意：Firefox30中，水平滚动条的宽度是17个像素。</p>
+<blockquote>
+<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">clientHeight = body.padding + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.offsetHeight + body.margin;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度;</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>因此，只是获取窗口可见高度，在FF中得用documentElement.clientHeight，获取整个页面的高度，则应该用documentElement.scrollHeight。</p>
+<blockquote>
+<p>元素</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height；</div><div class="line"></div><div class="line">clientHeight = padding +height -水平滚动条的高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure>
+<p>==总结：从body, documentElement,元素的结果分析，FireFox认为scrollHeight的最小高度是clientHeight。==</p>
+<p>==offsetLeft = 元素border左上角到window视窗原点的距离 或 到offsetParent的border box顶部的距离。==</p>
+<h3 id="Chrome-39"><a href="#Chrome-39" class="headerlink" title="==Chrome 39=="></a><strong>==Chrome 39==</strong></h3><p>注意：Chrome39中，水平滚动条的宽度是17个像素。</p>
+<blockquote>
+<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding+ body.border + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">clientHeight= body.pdding + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">scrollHeight &gt;= offsetHeight; 并且scrollHeight &gt;= window窗口可见高度；</div></pre></td></tr></table></figure></p>
+<p>如果body没有内容(空的)：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">body.offsetHeight == documentElement.offsetHeight;</div><div class="line"></div><div class="line">body.clientHeight ==documentElement.clientHeight;</div><div class="line"></div><div class="line">body.scrollHeight ==documentElement.scrollHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="而且以上属性的值都是浏览器的视窗高度。"><a href="#而且以上属性的值都是浏览器的视窗高度。" class="headerlink" title="而且以上属性的值都是浏览器的视窗高度。"></a>而且以上属性的值都是浏览器的视窗高度。</h4><blockquote>
+<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = scrollHeight = body.offsetHeight+ body.margin;</div><div class="line"></div><div class="line">clientHeight = window视窗可见高度;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==如果body内容过短，则documentElement的offsetHeight和scrollHeight将比clientHeight小。==</p>
+<p>==因此，只是获取页面窗口可视部分高度，在Chrome中用documentElement.clientHeight；获取整个页面内容最大高度（如果比窗口小，取窗口的高度），则应该用body.scrollHeight；获取页面内容的实际高度，应该使用body.offsetHeight()。==========</p>
+<blockquote>
+<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + border + height；</div><div class="line"></div><div class="line">clientHeight = padding + height -水平滚动条的高度；</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight；</div><div class="line"></div><div class="line">offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="IE9"><a href="#IE9" class="headerlink" title="==IE9=="></a><strong>==IE9==</strong></h3><p>==注意：IE9中，滚动条的宽度是17个像素。==</p>
+<blockquote>
+<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取window窗口可见高度，在IE9中得用documentElement.clientHeight，获取整个页面内容的高度，则应该用documentElement.scrollHeight。==</p>
+<blockquote>
+<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - 滚动条的宽度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==总结：从body, documentElement,元素的结果分析，IE9认为scrollHeight的最小高度是clientHeight。==</p>
+<p>==从结果分析，IE9认为scrollHeight的最小高度是clientHeight。==</p>
+<h3 id="IE8"><a href="#IE8" class="headerlink" title="==IE8=="></a>==<strong>IE8</strong>==</h3><p>==注意：IE8中，滚动条的宽度是17个像素。==</p>
+<blockquote>
+<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度 + body.border</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取窗口可见高度，在IE8中得用documentElement.clientHeight，获取整个页面内容高度，则应该用documentElement.scrollHeight。==</p>
+<blockquote>
+<p>元素上<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height – 水平滚动条高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==从结果分析，IE8认为scrollHeight的最小高度是clientHeight。==</p>
+<p>==offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。==</p>
+<h3 id="IE7"><a href="#IE7" class="headerlink" title="==IE7=="></a><strong>==IE7==</strong></h3><p>==注意：IE7中，滚动条的宽度是17个像素。==</p>
+<blockquote>
+<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border+ body.height(CSS设置或内容撑大)；</div><div class="line"></div><div class="line">clientHeight = body.height +body.padding – 水平滚动条高度；</div><div class="line"></div><div class="line">scrollHeight =  内容margin box的高度；</div></pre></td></tr></table></figure></p>
+<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight =window视窗可见高度;</div><div class="line"></div><div class="line">scrollHeight = body.offsetHeight+ body.margin;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取窗口可见部分高度，在IE7中得用documentElement.clientHeight，获取整个页面内容的大小，则用documentElement.scrollHeight。==</p>
+<blockquote>
+<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==从结果分析，IE7认为scrollHeight 可以小于clientHeight。==</p>
+<p>==offsetLeft = 元素border box左上角到父容器（不是offsetParent）的border box左上角的距离。==</p>
+<h3 id="IE6"><a href="#IE6" class="headerlink" title="==IE6=="></a><strong>==IE6==</strong></h3><blockquote>
+<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +内容margin box的高度。</div><div class="line"></div><div class="line">clientHeight = scrollHeight</div></pre></td></tr></table></figure></p>
+<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight=画布高度，但offsetHeight&gt;= clientHeight</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度。</div><div class="line"></div><div class="line">scrollHeight = 内容的高度</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取页面窗口的大小，在IE6中得用documentElement.clientHeight，获取整个页面内容的大小，则应该用documentElement.offsetHeight。==</p>
+<blockquote>
+<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==从结果分析，IE6认为scrollHeight 可以小于clientHeight。==</p>
+<p>==offsetLeft = 元素border box左上角到父容器（不是offsetParent）的border box左上角的距离。==</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ul>
+<li>==IE6、IE7认为scrollHeight可以小于clientHeight==</li>
+<li>==IE8、IE9和Firefox认为scrollHeight&gt;=clientHeight==</li>
+<li>==取窗口可见部分高度，统一用documentElement.clientHeight即可==</li>
+<li>==取页面内容的高度（如果内容高度比窗口高度小，取窗口高度)，则用documentElement.scrollHeight，只有Chrome需要使用body.scrollHeight==</li>
+</ul>
+<p>同理clientWidth、offsetWidth和scrollWidth的解释与上面相同，只是把高度换成宽度即可。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 网易云跟帖 start -->
+		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+		<script>
+		  var cloudTieConfig = {
+			url: document.location.href, 
+			sourceId: "",
+			productKey: "3d15f9f5512d40058669841c8e4ca7a4",
+			target: "cloud-tie-wrapper"
+		  };
+		</script>
+		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+		<!-- 网易云跟帖 end -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/27/手机横屏/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">手机强制横屏</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#clientHeight"><span class="nav-number">1.</span> <span class="nav-text">clientHeight</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#offsetHeight"><span class="nav-number">1.1.</span> <span class="nav-text">offsetHeight</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scrollHeight"><span class="nav-number">1.2.</span> <span class="nav-text">scrollHeight</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FF30"><span class="nav-number"></span> <span class="nav-text">==FF30==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-39"><span class="nav-number"></span> <span class="nav-text">==Chrome 39==</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#而且以上属性的值都是浏览器的视窗高度。"><span class="nav-number">1.</span> <span class="nav-text">而且以上属性的值都是浏览器的视窗高度。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE9"><span class="nav-number"></span> <span class="nav-text">==IE9==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8"><span class="nav-number"></span> <span class="nav-text">==IE8==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE7"><span class="nav-number"></span> <span class="nav-text">==IE7==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6"><span class="nav-number"></span> <span class="nav-text">==IE6==</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number"></span> <span class="nav-text">结论</span></a>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 石猴博客 All Rights Reserved,Modified by stonemonkey
+      </div>
+      <div class="site-credit">
+		
+             <span id="busuanzi_container_site_pv" style="font-size: 12px;">
+                <i class="fa fa-bar-chart fa-bar-chart-o"></i>
+              本站总访问量: <span id="busuanzi_value_site_pv" style="font-family:Georgia;color:#f00;"><i class="fa fa-spinner fa-spin fa-pulse"></i></span>次
+              &nbsp;&nbsp;
+              Theme byhiero
+		         </span>
+      
+      </div>
+  </div>
+</footer>
+<div id="bottom-bar"></div>
+<!-- 鼠标连线 -->
+<script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script src="/js/nongli.js"></script>
+<!-- min height -->
+<script>
+    var contentdiv = document.getElementById("content");
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+	
+	var lunar = calendar.solar2lunar();
+	var str = lunar.IMonthCn+lunar.IDayCn;
+	document.getElementById("sj").innerHTML = document.getElementById("sj").innerHTML+" &nbsp;"+str;
+</script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/works" class="mobile-nav-link">Works</a>
+  
+    <a href="/bbs" class="mobile-nav-link">Bbs</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+ 
+
+  </div>
+
+  <a id="rocket" href="#top" class="" style="z-index:1000"></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
