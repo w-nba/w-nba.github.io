@@ -136,7 +136,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj31kk0t50002dgaksimj6zyh">
+      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj31kwru90001p8akoo00hbbn">
         <img src="/postImg/1.jpg" itemprop="image">
       </a>
     
@@ -358,6 +358,21 @@ git fsck
 	var lunar = calendar.solar2lunar();
 	var str = lunar.IMonthCn+lunar.IDayCn;
 	document.getElementById("sj").innerHTML = document.getElementById("sj").innerHTML+" &nbsp;"+str;
+</script>
+<!-- 自动推送到百度 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
 
     </div>
