@@ -142,7 +142,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/4.jpg" rel="gallery_cj4ec38430017rsak8oft7zxt">
+      <a class="article-gallery-img fancybox" href="/postImg/4.jpg" rel="gallery_cj4ecewcm000pwcakm77e2i2a">
         <img src="/postImg/4.jpg" itemprop="image">
       </a>
     
@@ -196,6 +196,7 @@ var themeMenus = {};
         
 	<div id="comment">
 		<div id="SOHUCS" sid="百度网盘自定义提取码" ></div> 
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript">
 			(function() {
 				var appid = 'cysICaeY8';
@@ -204,15 +205,13 @@ var themeMenus = {};
 				if (width < 960) {
 					window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
 				} else {
-					var b = document.createElement("script");
-					b.setAttribute("type", "text/javascript");
-					b.src = "https://changyan.sohu.com/upload/changyan.js";
-					window._config = { showScore: true };
-					window.changyan.api.config({
-						appid: appid,
-						conf: conf
+					$.getScript("https://changyan.sohu.com/upload/changyan.js", function(){
+						window._config = { showScore: true };
+						window.changyan.api.config({
+							appid: appid,
+							conf: conf
+						});
 					});
-					document.getElementsByTagName("head")[0].appendChild(b);
 				}
 			})();
 		</script>
