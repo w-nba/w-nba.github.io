@@ -130,6 +130,56 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-元素可视"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/07/01/元素可视/">元素可视</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	发表于 <a href="/2017/07/01/元素可视/" class="article-date">
+	  <time datetime="2017-06-30T16:15:28.000Z" itemprop="datePublished">七月 1, 2017</time>
+	</a>
+
+       
+    </div>
+    <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/07/01/元素可视/' " >
+      
+        <h2 id="获取某个元素是否在页面可视区域内"><a href="#获取某个元素是否在页面可视区域内" class="headerlink" title="获取某个元素是否在页面可视区域内"></a>获取某个元素是否在页面可视区域内</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JQuery</div><div class="line"></div><div class="line">$(function()&#123;</div><div class="line">    var mainOffsetTop = $(&quot;.body .blog ul li&quot;).first().offset().top;</div><div class="line">    var mainHeight = $(&quot;.body .blog ul li&quot;).first().height();</div><div class="line">    var winHeight = $(window).height();</div><div class="line">    $(window).scroll(function()&#123;</div><div class="line">        var winScrollTop = $(window).scrollTop();</div><div class="line">        if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">            console.log(&quot;不在可视区域内&quot;);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(&quot;在可视区域内&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>屏幕的100%高</p>
+<p>document.getElementById(“html”).clientHeight;</p>
+</blockquote>
+<h2 id="获取某个元素是否在页面可视区域内-1"><a href="#获取某个元素是否在页面可视区域内-1" class="headerlink" title="获取某个元素是否在页面可视区域内"></a>获取某个元素是否在页面可视区域内</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JavaScript</div><div class="line"></div><div class="line">var yuansu = $(&quot;.body .blog ul li&quot;).first();</div><div class="line">var mainOffsetTop = yuansu.offsetTop;</div><div class="line">var mainHeight = yuansu.style.height;</div><div class="line">var winHeight = window.clietHeight;</div><div class="line">document.body.onscroll = function()&#123;</div><div class="line">    var winScrollTop = document.body.scrollTop;</div><div class="line">    if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">        console.log(&quot;不在可视区域内&quot;);</div><div class="line">    &#125;else&#123;</div><div class="line">        console.log(&quot;在可视区域内&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>, <a class="article-category-link" href="/categories/JavaScript/jQuery/">jQuery</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-clientHeight和offsetHeight和scrollHeight"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -541,52 +591,6 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 <!-- Table of Contents -->
 
   
-    <article id="post-六州歌头·少年侠气"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/03/11/六州歌头·少年侠气/">六州歌头·少年侠气</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	发表于 <a href="/2017/03/11/六州歌头·少年侠气/" class="article-date">
-	  <time datetime="2017-03-11T09:12:49.000Z" itemprop="datePublished">三月 11, 2017</time>
-	</a>
-
-       
-    </div>
-    <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/六州歌头·少年侠气/' " >
-      
-        <p>少年侠气，交结五都雄。肝胆洞。毛发耸。立谈中。死生同。一诺千金重。推翘勇。矜豪纵。轻盖拥。联飞鞚。斗城东。轰饮酒垆，春色浮寒瓮。吸海垂虹。闲呼鹰嗾犬，白羽摘雕弓。狡穴俄空。乐匆匆。<br>似黄粱梦。辞丹凤。明月共。漾孤篷。官冗從。怀倥偬。落尘笼。簿书丛。鹖弁如云众。供粗用。忽奇功。笳鼓动。渔阳弄。思悲翁。不请长缨，系取天骄种。剑吼西风。恨登山临水，手寄七弦桐。目送归鸿。</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/poem/">poem</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/诗词/">诗词</a></li></ul>
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
@@ -741,6 +745,21 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
             
               <div class="widget-entry-thumbnail">
+                <a href="/2017/07/01/元素可视/" title=""><img width="50" height="50" src="/postImg/2.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+              </div>
+              <div class="widget-entry-summary">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/07/01/元素可视/">元素可视</a></h6>
+              <span>七月 1, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-thumbnail">
                 <a href="/2017/05/22/clientHeight和offsetHeight和scrollHeight/" title=""><img width="50" height="50" src="/postImg/1.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
@@ -812,21 +831,6 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-thumbnail">
-                <a href="/2017/03/15/百度网盘自定义提取码/" title=""><img width="50" height="50" src="/postImg/4.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
-              </div>
-              <div class="widget-entry-summary">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/03/15/百度网盘自定义提取码/">百度网盘自定义提取码</a></h6>
-              <span>三月 15, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -836,7 +840,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/Jquery/">Jquery</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/Github/">Github</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">poem</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/jQuery/">jQuery</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/Jquery/">Jquery</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/Github/">Github</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/poem/">poem</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -846,7 +850,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jquery/">Jquery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jquery/">Jquery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/诗词/">诗词</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -856,7 +860,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud" id="randColor2">
-      <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Jquery/" style="font-size: 10px;">Jquery</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 15px;">黑科技</a>
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Jquery/" style="font-size: 10px;">Jquery</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/诗词/" style="font-size: 15px;">诗词</a> <a href="/tags/黑科技/" style="font-size: 15px;">黑科技</a>
     </div>
   </div>
 
@@ -866,7 +870,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
