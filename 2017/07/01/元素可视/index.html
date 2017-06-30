@@ -20,20 +20,17 @@ var _hmt = _hmt || [];
   
   
   
-  <meta name="description" content="获取某个元素是否在页面可视区域内
-JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var wi">
+  <meta name="description" content="获取某个元素是否在页面可视区域内JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var win">
 <meta property="og:type" content="article">
 <meta property="og:title" content="判断某个元素是否在屏幕可视区域内">
 <meta property="og:url" content="http://stonemonkey.top/2017/07/01/元素可视/index.html">
 <meta property="og:site_name" content="石猴博客">
-<meta property="og:description" content="获取某个元素是否在页面可视区域内
-JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var wi">
+<meta property="og:description" content="获取某个元素是否在页面可视区域内JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var win">
 <meta property="og:image" content="http://stonemonkey.top/postImg/2.jpg">
 <meta property="og:updated_time" content="2017-06-30T16:27:24.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断某个元素是否在屏幕可视区域内">
-<meta name="twitter:description" content="获取某个元素是否在页面可视区域内
-JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var wi">
+<meta name="twitter:description" content="获取某个元素是否在页面可视区域内JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var win">
 <meta name="twitter:image" content="http://stonemonkey.top/postImg/2.jpg">
   
     <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
@@ -142,7 +139,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/2.jpg" rel="gallery_cj4k2o4a40009dsakqnubt6mx">
+      <a class="article-gallery-img fancybox" href="/postImg/2.jpg" rel="gallery_cj4k2rxbr000bssakjiphxn64">
         <img src="/postImg/2.jpg" itemprop="image">
       </a>
     
@@ -174,18 +171,13 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody"  >
       
-        <h2>获取某个元素是否在页面可视区域内</h2>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JQuery</div><div class="line">$(function()&#123;</div><div class="line">    var mainOffsetTop = $(&quot;.body .blog ul li&quot;).first().offset().top;</div><div class="line">    var mainHeight = $(&quot;.body .blog ul li&quot;).first().height();</div><div class="line">    var winHeight = $(window).height();</div><div class="line">    $(window).scroll(function()&#123;</div><div class="line">        var winScrollTop = $(window).scrollTop();</div><div class="line">        if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">            console.log(&quot;不在可视区域内&quot;);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(&quot;在可视区域内&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>&lt;!-- more --&gt;</p>
+        <h2 id="获取某个元素是否在页面可视区域内"><a href="#获取某个元素是否在页面可视区域内" class="headerlink" title="获取某个元素是否在页面可视区域内"></a>获取某个元素是否在页面可视区域内</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JQuery</div><div class="line">$(function()&#123;</div><div class="line">    var mainOffsetTop = $(&quot;.body .blog ul li&quot;).first().offset().top;</div><div class="line">    var mainHeight = $(&quot;.body .blog ul li&quot;).first().height();</div><div class="line">    var winHeight = $(window).height();</div><div class="line">    $(window).scroll(function()&#123;</div><div class="line">        var winScrollTop = $(window).scrollTop();</div><div class="line">        if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">            console.log(&quot;不在可视区域内&quot;);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(&quot;在可视区域内&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <blockquote>
 <p>屏幕的100%高</p>
+<p>document.getElementById(“html”).clientHeight;</p>
 </blockquote>
-<blockquote>
-<p>document.getElementById(&quot;html&quot;).clientHeight;</p>
-</blockquote>
-<h2>获取某个元素是否在页面可视区域内</h2>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JavaScript</div><div class="line"></div><div class="line">var yuansu = $(&quot;.body .blog ul li&quot;).first();</div><div class="line">var mainOffsetTop = yuansu.offsetTop;</div><div class="line">var mainHeight = yuansu.style.height;</div><div class="line">var winHeight = window.clietHeight;</div><div class="line">document.body.onscroll = function()&#123;</div><div class="line">    var winScrollTop = document.body.scrollTop;</div><div class="line">    if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">        console.log(&quot;不在可视区域内&quot;);</div><div class="line">    &#125;else&#123;</div><div class="line">        console.log(&quot;在可视区域内&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+<h2 id="获取某个元素是否在页面可视区域内-1"><a href="#获取某个元素是否在页面可视区域内-1" class="headerlink" title="获取某个元素是否在页面可视区域内"></a>获取某个元素是否在页面可视区域内</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JavaScript</div><div class="line"></div><div class="line">var yuansu = $(&quot;.body .blog ul li&quot;).first();</div><div class="line">var mainOffsetTop = yuansu.offsetTop;</div><div class="line">var mainHeight = yuansu.style.height;</div><div class="line">var winHeight = window.clietHeight;</div><div class="line">document.body.onscroll = function()&#123;</div><div class="line">    var winScrollTop = document.body.scrollTop;</div><div class="line">    if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">        console.log(&quot;不在可视区域内&quot;);</div><div class="line">    &#125;else&#123;</div><div class="line">        console.log(&quot;在可视区域内&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -246,7 +238,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">获取某个元素是否在页面可视区域内</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">获取某个元素是否在页面可视区域内</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取某个元素是否在页面可视区域内"><span class="nav-number">1.</span> <span class="nav-text">获取某个元素是否在页面可视区域内</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取某个元素是否在页面可视区域内-1"><span class="nav-number">2.</span> <span class="nav-text">获取某个元素是否在页面可视区域内</span></a></li></ol>
     
     </div>
   </aside>
