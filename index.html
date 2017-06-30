@@ -138,7 +138,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/01/元素可视/">元素可视</a>
+      <a class="article-title" href="/2017/07/01/元素可视/">判断某个元素是否在屏幕可视区域内</a>
     </h1>
   
 
@@ -154,18 +154,18 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/07/01/元素可视/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/07/01/元素可视/"><img width="250" height="175" src="/postImg/2.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          获取某个元素是否在页面可视区域内JQuery$(function()&#123;    var mainOffsetTop = $(&quot;.body .blog ul li&quot;).first().offset().top;    var mainHeight = $(&quot;.body .blog ul li&quot;).first().height();    var ...
+        <h2>获取某个元素是否在页面可视区域内</h2>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JQuery</div><div class="line">$(function()&#123;</div><div class="line">    var mainOffsetTop = $(&quot;.body .blog ul li&quot;).first().offset().top;</div><div class="line">    var mainHeight = $(&quot;.body .blog ul li&quot;).first().height();</div><div class="line">    var winHeight = $(window).height();</div><div class="line">    $(window).scroll(function()&#123;</div><div class="line">        var winScrollTop = $(window).scrollTop();</div><div class="line">        if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">            console.log(&quot;不在可视区域内&quot;);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(&quot;在可视区域内&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>&lt;!-- more --&gt;</p>
+<blockquote>
+<p>屏幕的100%高</p>
+</blockquote>
+<blockquote>
+<p>document.getElementById(&quot;html&quot;).clientHeight;</p>
+</blockquote>
+<h2>获取某个元素是否在页面可视区域内</h2>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JavaScript</div><div class="line"></div><div class="line">var yuansu = $(&quot;.body .blog ul li&quot;).first();</div><div class="line">var mainOffsetTop = yuansu.offsetTop;</div><div class="line">var mainHeight = yuansu.style.height;</div><div class="line">var winHeight = window.clietHeight;</div><div class="line">document.body.onscroll = function()&#123;</div><div class="line">    var winScrollTop = document.body.scrollTop;</div><div class="line">    if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">        console.log(&quot;不在可视区域内&quot;);</div><div class="line">    &#125;else&#123;</div><div class="line">        console.log(&quot;在可视区域内&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-        
-          <p class="article-more-link">
-            <a href="/2017/07/01/元素可视/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -210,20 +210,135 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/05/22/clientHeight和offsetHeight和scrollHeight/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/05/22/clientHeight和offsetHeight和scrollHeight/"><img width="250" height="175" src="/postImg/1.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度
+        <h4>clientHeight</h4>
+<p>大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度</div></pre></td></tr></table></figure></p>
+<p>&lt;!-- more --&gt;</p>
+<h5>offsetHeight</h5>
+<p>在IE6，IE7，IE8， IE9以及最新的的FF, Chrome中，对于一般元素，都是</p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + height + border = clientHeight + 滚动条 + 边框</div></pre></td></tr></table></figure></p>
+<h5>scrollHeight</h5>
+<p>scrollHeight的争议比较大，有些浏览器认为scrollHeight可以小于clientHeight，有些认为scrollHeight至少应该等于clientHeight。但有一点是一样的，就是</p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">scrollHeight &gt;= topPadding + bottomPadding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+<p>在浏览器中的区别在于：</p>
+<p>==IE6、IE7 认为scrollHeight 是内容高度，可以小于clientHeight==。</p>
+<p>==FF 认为scrollHeight 是内容高度，不过最小值是clientHeight。==</p>
+<p>注： 以上都是对于一般元素而言的，body和documentElement的clientHeight, offsetHeight和scrollHeight在各个浏览器中的计算方式又不同。</p>
+<p>==在所有的浏览器中，如果你想获取<strong>视窗可见部分</strong>的高度，应该使用<strong>documentElement.clientHeight</strong>，因为<strong>body.clientHeight</strong>是由它的<strong>内容</strong>决定的。==</p>
+<h3><strong>==FF30==</strong></h3>
+<p>注意：Firefox30中，水平滚动条的宽度是17个像素。</p>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">clientHeight = body.padding + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.offsetHeight + body.margin;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度;</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>因此，只是获取窗口可见高度，在FF中得用documentElement.clientHeight，获取整个页面的高度，则应该用documentElement.scrollHeight。</p>
+<blockquote>
+<p>元素</p>
+</blockquote>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height；</div><div class="line"></div><div class="line">clientHeight = padding +height -水平滚动条的高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure></p>
+<p>==总结：从body, documentElement,元素的结果分析，FireFox认为scrollHeight的最小高度是clientHeight。==</p>
+<p>==offsetLeft = 元素border左上角到window视窗原点的距离 或 到offsetParent的border box顶部的距离。==</p>
+<h3><strong>==Chrome 39==</strong></h3>
+<p>注意：Chrome39中，水平滚动条的宽度是17个像素。</p>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding+ body.border + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">clientHeight= body.pdding + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">scrollHeight &gt;= offsetHeight; 并且scrollHeight &gt;= window窗口可见高度；</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>如果body没有内容(空的)：
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">body.offsetHeight == documentElement.offsetHeight;</div><div class="line"></div><div class="line">body.clientHeight ==documentElement.clientHeight;</div><div class="line"></div><div class="line">body.scrollHeight ==documentElement.scrollHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4>而且以上属性的值都是浏览器的视窗高度。</h4>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = scrollHeight = body.offsetHeight+ body.margin;</div><div class="line"></div><div class="line">clientHeight = window视窗可见高度;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==如果body内容过短，则documentElement的offsetHeight和scrollHeight将比clientHeight小。==</p>
+<p>==因此，只是获取页面窗口可视部分高度，在Chrome中用documentElement.clientHeight；获取整个页面内容最大高度（如果比窗口小，取窗口的高度），则应该用body.scrollHeight；获取页面内容的实际高度，应该使用body.offsetHeight()。==========</p>
+<blockquote>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + border + height；</div><div class="line"></div><div class="line">clientHeight = padding + height -水平滚动条的高度；</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight；</div><div class="line"></div><div class="line">offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3><strong>==IE9==</strong></h3>
+<p>==注意：IE9中，滚动条的宽度是17个像素。==</p>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取window窗口可见高度，在IE9中得用documentElement.clientHeight，获取整个页面内容的高度，则应该用documentElement.scrollHeight。==</p>
+<blockquote>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - 滚动条的宽度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==总结：从body, documentElement,元素的结果分析，IE9认为scrollHeight的最小高度是clientHeight。==</p>
+<p>==从结果分析，IE9认为scrollHeight的最小高度是clientHeight。==</p>
+<h3>==<strong>IE8</strong>==</h3>
+<p>==注意：IE8中，滚动条的宽度是17个像素。==</p>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度 + body.border</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取窗口可见高度，在IE8中得用documentElement.clientHeight，获取整个页面内容高度，则应该用documentElement.scrollHeight。==</p>
+<blockquote>
+<p>元素上
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height – 水平滚动条高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==从结果分析，IE8认为scrollHeight的最小高度是clientHeight。==</p>
+<p>==offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。==</p>
+<h3><strong>==IE7==</strong></h3>
+<p>==注意：IE7中，滚动条的宽度是17个像素。==</p>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border+ body.height(CSS设置或内容撑大)；</div><div class="line"></div><div class="line">clientHeight = body.height +body.padding – 水平滚动条高度；</div><div class="line"></div><div class="line">scrollHeight =  内容margin box的高度；</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight =window视窗可见高度;</div><div class="line"></div><div class="line">scrollHeight = body.offsetHeight+ body.margin;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取窗口可见部分高度，在IE7中得用documentElement.clientHeight，获取整个页面内容的大小，则用documentElement.scrollHeight。==</p>
+<blockquote>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==从结果分析，IE7认为scrollHeight 可以小于clientHeight。==</p>
+<p>==offsetLeft = 元素border box左上角到父容器（不是offsetParent）的border box左上角的距离。==</p>
+<h3><strong>==IE6==</strong></h3>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +内容margin box的高度。</div><div class="line"></div><div class="line">clientHeight = scrollHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight=画布高度，但offsetHeight&gt;= clientHeight</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度。</div><div class="line"></div><div class="line">scrollHeight = 内容的高度</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==因此，只是获取页面窗口的大小，在IE6中得用documentElement.clientHeight，获取整个页面内容的大小，则应该用documentElement.offsetHeight。==</p>
+<blockquote>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>==从结果分析，IE6认为scrollHeight 可以小于clientHeight。==</p>
+<p>==offsetLeft = 元素border box左上角到父容器（不是offsetParent）的border box左上角的距离。==</p>
+<h2>结论</h2>
+<ul>
+<li>==IE6、IE7认为scrollHeight可以小于clientHeight==</li>
+<li>==IE8、IE9和Firefox认为scrollHeight&gt;=clientHeight==</li>
+<li>==取窗口可见部分高度，统一用documentElement.clientHeight即可==</li>
+<li>==取页面内容的高度（如果内容高度比窗口高度小，取窗口高度)，则用documentElement.scrollHeight，只有Chrome需要使用body.scrollHeight==</li>
+</ul>
+<p>同理clientWidth、offsetWidth和scrollWidth的解释与上面相同，只是把高度换成宽度即可。</p>
 
-offsetHeight在I...
-
-        
-          <p class="article-more-link">
-            <a href="/2017/05/22/clientHeight和offsetHeight和scrollHeight/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -268,18 +383,10 @@ offsetHeight在I...
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/27/手机横屏/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/04/27/手机横屏/"><img width="250" height="175" src="/postImg/1.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          页面打开，直接横屏显示。&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;	&lt;meta charset=&quot;UTF-8&quot;&gt;	&lt;title&gt;手机强制横屏&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;ma...
+        <p>页面打开，直接横屏显示。
+&lt;!-- more --&gt;
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;手机强制横屏&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class=&quot;main&quot;&gt;</div><div class="line">	这是一个横屏测试</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script src=&quot;https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  $(window).on(&apos;load resize&apos;,function()&#123;</div><div class="line">    var w = window.innerWidth, h = window.innerHeight;</div><div class="line">    var $container = $(&apos;.main&apos;);</div><div class="line">    if (w&lt;h) &#123;</div><div class="line">        $container.css(&#123;</div><div class="line">            &apos;width&apos;: h,</div><div class="line">            &apos;height&apos;: w,</div><div class="line">            &apos;transform&apos;: &apos;rotate(90deg)&apos;,</div><div class="line">            &apos;-webkit-transform&apos;: &apos;rotate(90deg)&apos;,</div><div class="line">            &apos;transform-origin&apos;: w/h/2*100+&apos;% 50%&apos;,</div><div class="line">            &apos;-webkit-transform-origin&apos;: w/h/2*100+&apos;% 50%&apos;</div><div class="line">        &#125;);</div><div class="line">    &#125; else &#123;</div><div class="line">        $container.removeAttr(&apos;style&apos;);</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
 
-        
-          <p class="article-more-link">
-            <a href="/2017/04/27/手机横屏/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -324,19 +431,14 @@ offsetHeight在I...
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/15/每周烧脑-2/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/04/15/每周烧脑-2/"><img width="250" height="175" src="/postImg/-2.png" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          如图所示，有一堵由高度相同但长度不同的砖块砌成的墙，墙的每一层的总长度相同。你需要从上到下画一条垂线，使得这条线切断的砖块最少（注意，不可以在最左或最右边画线），并返回被切断的砖的数量。
-输入的数据是一个数组的数组，每一个子数组代表一层，元素是这一层从左到右每块砖的长度。如上图的输入是：[[1,2,2,1], [3,1,2], [1,3,2], [2,4], [3,1,2], [1,3,1,...
+        <p>如图所示，有一堵由高度相同但长度不同的砖块砌成的墙，墙的每一层的总长度相同。你需要从上到下画一条垂线，使得这条线切断的砖块最少（注意，不可以在最左或最右边画线），并返回被切断的砖的数量。</p>
+<p>输入的数据是一个数组的数组，每一个子数组代表一层，元素是这一层从左到右每块砖的长度。
+&lt;!-- more --&gt;
+如上图的输入是：
+[[1,2,2,1], [3,1,2], [1,3,2], [2,4], [3,1,2], [1,3,1,1]]
+输出是2</p>
+<p><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> splitWall = <span class="function"><span class="keyword">function</span>(<span class="params">wall</span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> sum = [],sameArr = [],count = <span class="number">0</span>,same = <span class="number">0</span>;     <span class="comment">//sum由每个数组累加的和的值组成，sameArr由累加和相同的数组的个数组成，count为累加和，same为累加和相同的数组的个数;</span></div><div class="line"></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;wall.length;i++)&#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;wall[i].length<span class="number">-1</span>;j++)&#123;</div><div class="line">			count = count+wall[i][j];			</div><div class="line">			sum.push(count);</div><div class="line">		&#125;</div><div class="line">		count = <span class="number">0</span>;	</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;sum.length<span class="number">-1</span>;i++)&#123;</div><div class="line">		<span class="keyword">var</span> sumNew = sum.sort();	</div><div class="line">		<span class="keyword">if</span>(sumNew[i] == sumNew[i+<span class="number">1</span>] &amp;&amp; sumNew[i] == sumNew[i<span class="number">-1</span>])&#123;</div><div class="line">			same++;</div><div class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(sumNew[i] != sumNew[i+<span class="number">1</span>] &amp;&amp; sumNew[i] != sumNew[i<span class="number">-1</span>])&#123;</div><div class="line">			same = <span class="number">0</span>;</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			same = <span class="number">2</span>;	</div><div class="line">		&#125;</div><div class="line">		sameArr.push(same);</div><div class="line">	&#125;</div><div class="line">	same = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, sameArr);</div><div class="line">	<span class="keyword">var</span> diff = wall.length - same;</div><div class="line">	<span class="keyword">return</span> diff;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>],[<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>],[<span class="number">2</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>],[<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">6</span>],[<span class="number">3</span>,<span class="number">3</span>],[<span class="number">3</span>,<span class="number">3</span>],[<span class="number">6</span>],[<span class="number">3</span>,<span class="number">3</span>]];  </div><div class="line">alert(splitWall(arr));</div></pre></td></tr></table></figure></p>
 
-        
-          <p class="article-more-link">
-            <a href="/2017/04/15/每周烧脑-2/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -381,22 +483,238 @@ offsetHeight在I...
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/07/git命令集合/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/04/07/git命令集合/"><img width="250" height="175" src="/postImg/1.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          初始化本地git仓库（创建新仓库）git init    
-配置用户名git config --global user.name &quot;xxx&quot; 
-配置邮件git config --global user.email &quot;xxx@xxx.com&quot;  
+        <h4>初始化本地git仓库（创建新仓库）</h4>
+<pre><code>    git init    
+</code></pre>
+<h4>配置用户名</h4>
+<pre><code>git config --global user.name &quot;xxx&quot; 
+</code></pre>
+<h4>配置邮件</h4>
+<pre><code>git config --global user.email &quot;xxx@xxx.com&quot;  
+</code></pre>
+<p>&lt;!-- more --&gt;</p>
+<h4>clone远程仓库</h4>
+<pre><code>git clone git+ssh://git@192.168.53.168/VT.git 
+</code></pre>
+<h4>查看当前版本状态（是否修改）</h4>
+<pre><code>git status
+</code></pre>
+<h4>添加xyz文件至index</h4>
+<pre><code>git add xyz  
+</code></pre>
+<h4>增加当前子目录下所有更改过的文件至index</h4>
+<pre><code>git add .  
+</code></pre>
+<h4>提交</h4>
+<pre><code>git commit -m 'xxx'  
+</code></pre>
+<h4>合并上一次提交（用于反复修改）</h4>
+<pre><code>git commit --amend -m 'xxx'  
+</code></pre>
+<h4>将add和commit合为一步</h4>
+<pre><code>git commit -am 'xxx'
+</code></pre>
+<h4>删除index中的文件</h4>
+<pre><code>git rm xxx    
+</code></pre>
+<h4>递归删除</h4>
+<pre><code>git rm -r * 
+</code></pre>
+<h4>显示提交日志</h4>
+<pre><code>git log    
+</code></pre>
+<h4>显示1行日志 -n为n行</h4>
+<pre><code>git log -1   
+</code></pre>
+<h4>显示提交日志及相关变动文件</h4>
+<pre><code>git log --stat 
 
-clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
+git log -p -m
+</code></pre>
+<h4>显示某个提交的详细内容</h4>
+<pre><code>git show dfb02e6e4f2f7b573337763e5c0013802e392818 
+</code></pre>
+<h4>可只用commitid的前几位</h4>
+<pre><code>git show dfb02
+</code></pre>
+<h4>显示HEAD提交日志</h4>
+<pre><code>git show HEAD 
+</code></pre>
+<h4>显示HEAD的父（上一个版本）的提交日志 ^<sup>为上两个版本</sup>5为上5个版本</h4>
+<pre><code>git show HEAD^ 
+</code></pre>
+<h4>显示已存在的tag</h4>
+<pre><code>git tag 
+</code></pre>
+<h4>增加v2.0的tag</h4>
+<pre><code>git tag -a v2.0 -m 'xxx' 
+</code></pre>
+<h4>显示v2.0的日志及详细内容</h4>
+<pre><code>git show v2.0 
+</code></pre>
+<h4>显示v2.0的日志</h4>
+<pre><code>git log v2.0  
+</code></pre>
+<h4>显示所有未添加至index的变更</h4>
+<pre><code>git diff  
+</code></pre>
+<h4>显示所有已添加index但还未commit的变更</h4>
+<pre><code>git diff --cached
+</code></pre>
+<h4>比较与上一个版本的差异</h4>
+<pre><code>git diff HEAD^ 
+</code></pre>
+<h4>比较与HEAD版本lib目录的差异</h4>
+<pre><code>git diff HEAD -- ./lib 
+</code></pre>
+<h4>比较远程分支master上有本地分支master上没有的</h4>
+<pre><code>git diff origin/master..master 
+</code></pre>
+<h4>只显示差异的文件，不显示具体内容</h4>
+<pre><code>git diff origin/master..master --stat 
+</code></pre>
+<h4>增加远程定义（用于push/pull/fetch）</h4>
+<pre><code>git remote add origin git+ssh://git@192.168.53.168/VT.git
+</code></pre>
+<h4>显示本地分支</h4>
+<pre><code>git branch 
+</code></pre>
+<h4>显示包含提交50089的分支</h4>
+<pre><code>git branch --contains 50089                            
+</code></pre>
+<h4>显示所有分支</h4>
+<pre><code>git branch -a 
+</code></pre>
+<h4>显示所有原创分支</h4>
+<pre><code>git branch -r                            
+</code></pre>
+<h4>显示所有已合并到当前分支的分支</h4>
+<pre><code>git branch --merged 
+</code></pre>
+<h4>显示所有未合并到当前分支的分支</h4>
+<pre><code>git branch --no-merged   
+</code></pre>
+<h4>本地分支改名</h4>
+<pre><code>git branch -m master master_copy  
+</code></pre>
+<h4>从当前分支创建新分支master_copy并检出</h4>
+<pre><code>git checkout -b master_copy                          
+</code></pre>
+<h4>上面的完整版</h4>
+<pre><code>git checkout -b master master_copy 
+</code></pre>
+<h4>检出已存在的features/performance分支</h4>
+<pre><code>git checkout features/performance 
+</code></pre>
+<h4>检出远程分支hotfixes/BJVEP933并创建本地跟踪分支</h4>
+<pre><code>git checkout --track hotfixes/BJVEP933
+</code></pre>
+<h4>检出版本v2.0</h4>
+<pre><code>git checkout v2.0
+</code></pre>
+<h4>从远程分支develop创建新本地分支devel并检出</h4>
+<pre><code>git checkout -b devel origin/develop
+</code></pre>
+<h4>检出head版本的README文件（可用于修改错误回退）</h4>
+<pre><code>git checkout -- README
+</code></pre>
+<h4>合并远程master分支至当前分支</h4>
+<pre><code>git merge origin/master 
+</code></pre>
+<h4>合并提交ff44785404a8e的修改</h4>
+<pre><code>git cherry-pick ff44785404a8e 
+</code></pre>
+<h4>将当前分支push到远程master分支</h4>
+<pre><code>git push origin master 
+</code></pre>
+<h4>删除远程仓库的hotfixes/BJVEP933分支</h4>
+<pre><code>git push origin :hotfixes/BJVEP933                      
+</code></pre>
+<h4>把所有tag推送到远程仓库</h4>
+<pre><code>git push --tags
+</code></pre>
+<h4>获取所有远程分支（不更新本地分支，另需merge）</h4>
+<pre><code>git fetch
+</code></pre>
+<h4>获取所有原创分支并清除服务器上已删掉的分支</h4>
+<pre><code>git fetch --prune 
+</code></pre>
+<h4>获取远程分支master并merge到当前分支</h4>
+<pre><code>git pull origin master
+</code></pre>
+<h4>重命名文件README为README2</h4>
+<pre><code>git mv README README2
+</code></pre>
+<h4>将当前版本重置为HEAD（通常用于merge失败回退）</h4>
+<pre><code>git reset --hard HEAD
 
-        
-          <p class="article-more-link">
-            <a href="/2017/04/07/git命令集合/#more">阅读全文</a>
-          </p>
-        </div>
+git rebase
+</code></pre>
+<h4>删除分支hotfixes/BJVEP933（本分支修改已合并到其他分支）</h4>
+<pre><code>git branch -d hotfixes/BJVEP933
+</code></pre>
+<h4>强制删除分支hotfixes/BJVEP933</h4>
+<pre><code>git branch -D hotfixes/BJVEP933 
+</code></pre>
+<h4>列出git index包含的文件</h4>
+<pre><code>git ls-files
+</code></pre>
+<h4>图示当前分支历史</h4>
+<pre><code>git show-branch 
+</code></pre>
+<h4>图示所有分支历史</h4>
+<pre><code>git show-branch --all 
+</code></pre>
+<h4>显示提交历史对应的文件修改</h4>
+<pre><code>git whatchanged
+</code></pre>
+<h4>撤销提交dfb02e6e4f2f7b573337763e5c0013802e392818</h4>
+<pre><code>git revert dfb02e6e4f2f7b573337763e5c0013802e392818
+</code></pre>
+<h4>内部命令：显示某个git对象</h4>
+<pre><code>git ls-tree HEAD 
+</code></pre>
+<h4>内部命令：显示某个ref对于的SHA1 HASH</h4>
+<pre><code>git rev-parse v2.0
+</code></pre>
+<h4>显示所有提交，包括孤立节点</h4>
+<pre><code>git reflog
+
+git show HEAD@{5}
+</code></pre>
+<h4>显示master分支昨天的状态</h4>
+<pre><code>git show master@{yesterday}
+</code></pre>
+<h4>图示提交日志</h4>
+<pre><code>git log --pretty=format:'%h %s' --graph
+
+git show HEAD~3
+
+git show -s --pretty=raw 2be7fcb476
+</code></pre>
+<h4>暂存当前修改，将所有至为HEAD状态</h4>
+<pre><code>git stash
+</code></pre>
+<h4>查看所有暂存</h4>
+<pre><code>git stash list
+</code></pre>
+<h4>参考第一次暂存</h4>
+<pre><code>git stash show -p stash@{0} 
+</code></pre>
+<h4>应用第一次暂存</h4>
+<pre><code>git stash apply stash@{0}
+</code></pre>
+<h4>文件中搜索文本“delete from”</h4>
+<pre><code>git grep &quot;delete from&quot;
+
+git grep -e 'define' --and -e SORT_DIRENT
+
+git gc
+
+git fsck
+</code></pre>
+<p><img src="/uploads/git.png" alt="git常用命令"></p>
+
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -441,24 +759,19 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/04/03/每周烧脑-1/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/04/03/每周烧脑-1/"><img width="250" height="175" src="/postImg/3.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          完美数完美数定义如下：
+        <p>完美数
+完美数定义如下：</p>
+<ol>
+<li>正整数</li>
+<li>是自己的因数（除自身以外）之和</li>
+</ol>
+<p>如28是完美数，因为 1 + 2 + 4 + 7 + 14 = 28</p>
+<p>给定一个数字，判断是否是完美数：
+&lt;!-- more --&gt;
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">  &lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">IsPerfectNumber</span>(<span class="params">number</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> sum = <span class="number">0</span>;</div><div class="line">		<span class="keyword">var</span> num=<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.sqrt(number));</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = num; i &gt; <span class="number">1</span>; i--) &#123;</div><div class="line">			<span class="keyword">if</span>(number%i == <span class="number">0</span>)&#123;</div><div class="line">				sum = sum + i +number/i; </div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>((sum+<span class="number">1</span>) &gt; <span class="number">0</span>)&#123;</div><div class="line">			alert(<span class="string">"此数为完美数！因子和为"</span>+(sum+<span class="number">1</span>));</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			alert(<span class="string">"此数非完美数！"</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
+<p>此题在于减少运算量，先对其进行开方处理。
+有更简便的，可回复贴码。</p>
 
-正整数
-是自己的因数（除自身以外）之和
-
-如28是完美数，因为 1 + 2 + 4 + 7 + 14 = 28
-给定一个数字，判断是否是完美数：  &lt;script type="text/javascript"&gt;	function IsPerfectNumber(number)&#123;		var sum = 0;		var num=Math.floor...
-
-        
-          <p class="article-more-link">
-            <a href="/2017/04/03/每周烧脑-1/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -503,19 +816,19 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/15/百度网盘自定义提取码/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/03/15/百度网盘自定义提取码/"><img width="250" height="175" src="/postImg/4.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          请按照以下步骤进行操作：
-在浏览器中打开百度云盘，选中需要分享的文件，然后点击分享按钮；点击分享按钮后会弹出一个模态框，先不管它，按 F12 打开开发者工具，切换至控制台（Console），将以下代码复制粘贴到控制台，然后回车；javascript: require(["function-widget-1:share/util/service/createLinkShare.js"]) .p...
+        <p>请按照以下步骤进行操作：</p>
+<p>在浏览器中打开百度云盘，选中需要分享的文件，然后点击分享按钮；
+点击分享按钮后会弹出一个模态框，先不管它，按 F12 打开开发者工具，切换至控制台（Console），将以下代码复制粘贴到控制台，然后回车；
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">javascript: <span class="built_in">require</span>([<span class="string">"function-widget-1:share/util/service/createLinkShare.js"</span>])</div><div class="line"> .prototype.makePrivatePassword = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> prompt(<span class="string">"自定义百度网盘提取码"</span>, <span class="string">"host"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>&lt;!-- more --&gt;
+然后点击创建私密链接，会弹出输入框，这时输入你想自定义的密码即可！
+在此黑科技使用过程中需要注意以下事项：</p>
+<p>请按照教程一步一步的进行，否则可能会出现错误或失败！
+自定义的密码字符和必须为4（一个字母或数字的字符数是1，一个汉字的字符数是3，因此如果密码中有一个汉字则只能加一个字母或数字），如：1232、S猴等。</p>
+<p>附GIF图片一张，动画演示让你更加明了：
+<img src="/uploads/baiduyun.gif" alt="tiquma">
+本文转自老d博客。</p>
 
-        
-          <p class="article-more-link">
-            <a href="/2017/03/15/百度网盘自定义提取码/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -560,23 +873,35 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
     </div>
     <div class="article-entry" itemprop="articleBody" style="cursor:pointer" onclick="location.href = '/2017/03/11/你所不知道的Host/' " >
       
-        
-          <div class="entry-thumbnail">
-            <a href="/2017/03/11/你所不知道的Host/"><img width="250" height="175" src="/postImg/2.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
-          </div>
-          <div class="entry-summary">
-          Hosts是什么？
-其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。
-1. 修改hosts的作用是什么？
-可以加快域名解析
-可以进行谷歌、脸书、推特等国外网站的浏览
-屏...
+        <h1>Hosts是什么？</h1>
+<hr>
+<p>其作用就是将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统会再将网址提交DNS域名解析服务器进行IP地址的解析。
+&lt;!-- more --&gt;</p>
+<hr>
+<h3>1. 修改hosts的作用是什么？</h3>
+<ul>
+<li>可以加快域名解析</li>
+<li>可以进行谷歌、脸书、推特等国外网站的浏览</li>
+<li>屏蔽广告、网站等等</li>
+</ul>
+<h3>2. hosts的位置</h3>
+<blockquote>
+<p><strong><em>windows</em></strong> xp/2003/vista/2008/7/8/10用户HOSTS文件是在&quot;<strong>c:\windows\system32\drivers\etc\hosts</strong>&quot;
+<strong><em>Mac</em></strong>与<strong><em>Android</em></strong>、<strong><em>iOS</em></strong>用户HOSTS文件是在&quot;<strong>\etc\hosts</strong>&quot;</p>
+</blockquote>
+<h3>3. 如何修改</h3>
+<ul>
+<li>直接编辑本机Hosts文件</li>
+<li>牛人写好的直接替换
+<a href="https://github.com/racaljk/hosts" target="_blank" rel="external">github</a>
+<a href="https://pan.baidu.com/s/1dF67DRz" target="_blank" rel="external">百度云</a></li>
+</ul>
+<blockquote>
+<p>提取密码：host</p>
+</blockquote>
+<pre><code>注：这些网站都需要https的协议打开，国内某些软件会强制http，卸载即可。
+</code></pre>
 
-        
-          <p class="article-more-link">
-            <a href="/2017/03/11/你所不知道的Host/#more">阅读全文</a>
-          </p>
-        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -756,7 +1081,7 @@ clone远程仓库git clone git+ssh://git@192.168.53.168/VT.gi...
               <div class="widget-entry-summary">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/01/元素可视/">元素可视</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/01/元素可视/">判断某个元素是否在屏幕可视区域内</a></h6>
               <span>七月 1, 2017</span>
             </div>
 
