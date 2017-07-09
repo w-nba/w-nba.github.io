@@ -20,17 +20,26 @@ var _hmt = _hmt || [];
   
   
   
-  <meta name="description" content="clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度">
+  <meta name="description" content="clientHeight
+大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为
+clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度
+&amp;lt;!-- more --&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="clientHeight和offsetHeight和scrollHeight的区别">
 <meta property="og:url" content="http://stonemonkey.top/2017/05/22/clientHeight和offsetHeight和scrollHeight/index.html">
 <meta property="og:site_name" content="石猴博客">
-<meta property="og:description" content="clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度">
+<meta property="og:description" content="clientHeight
+大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为
+clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度
+&amp;lt;!-- more --&amp;">
 <meta property="og:image" content="http://stonemonkey.top/postImg/1.jpg">
 <meta property="og:updated_time" content="2017-05-22T12:41:48.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="clientHeight和offsetHeight和scrollHeight的区别">
-<meta name="twitter:description" content="clientHeight大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度">
+<meta name="twitter:description" content="clientHeight
+大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为
+clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度
+&amp;lt;!-- more --&amp;">
 <meta name="twitter:image" content="http://stonemonkey.top/postImg/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
@@ -139,7 +148,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj4wqowru0003zkak8xdcc4rp">
+      <a class="article-gallery-img fancybox" href="/postImg/1.jpg" rel="gallery_cj4wqs1q10007ysakz1zcfbm4">
         <img src="/postImg/1.jpg" itemprop="image">
       </a>
     
@@ -171,86 +180,128 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody"  >
       
-        <h4 id="clientHeight"><a href="#clientHeight" class="headerlink" title="clientHeight"></a>clientHeight</h4><p>大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h5 id="offsetHeight"><a href="#offsetHeight" class="headerlink" title="offsetHeight"></a>offsetHeight</h5><p>在IE6，IE7，IE8， IE9以及最新的的FF, Chrome中，对于一般元素，都是</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + height + border = clientHeight + 滚动条 + 边框</div></pre></td></tr></table></figure>
-<h5 id="scrollHeight"><a href="#scrollHeight" class="headerlink" title="scrollHeight"></a>scrollHeight</h5><p>scrollHeight的争议比较大，有些浏览器认为scrollHeight可以小于clientHeight，有些认为scrollHeight至少应该等于clientHeight。但有一点是一样的，就是</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">scrollHeight &gt;= topPadding + bottomPadding + 内容margin box的高度</div></pre></td></tr></table></figure>
+        <h4>clientHeight</h4>
+<p>大部分浏览器对 clientHeight 都没有什么异议，认为是元素可视区域的高度，也就是说元素或窗口中可以看到内容的这个区域的高度，即然是指可看到内容的区域，滚动条不算在内。但要注意padding是算在内。其计算方式为
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">clientHeight = topPadding + bottomPadding+ height - 水平滚动条高度</div></pre></td></tr></table></figure></p>
+<p>&lt;!-- more --&gt;</p>
+<h5>offsetHeight</h5>
+<p>在IE6，IE7，IE8， IE9以及最新的的FF, Chrome中，对于一般元素，都是</p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + height + border = clientHeight + 滚动条 + 边框</div></pre></td></tr></table></figure></p>
+<h5>scrollHeight</h5>
+<p>scrollHeight的争议比较大，有些浏览器认为scrollHeight可以小于clientHeight，有些认为scrollHeight至少应该等于clientHeight。但有一点是一样的，就是</p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">scrollHeight &gt;= topPadding + bottomPadding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
 <p>在浏览器中的区别在于：</p>
 <p>==IE6、IE7 认为scrollHeight 是内容高度，可以小于clientHeight==。</p>
 <p>==FF 认为scrollHeight 是内容高度，不过最小值是clientHeight。==</p>
 <p>注： 以上都是对于一般元素而言的，body和documentElement的clientHeight, offsetHeight和scrollHeight在各个浏览器中的计算方式又不同。</p>
 <p>==在所有的浏览器中，如果你想获取<strong>视窗可见部分</strong>的高度，应该使用<strong>documentElement.clientHeight</strong>，因为<strong>body.clientHeight</strong>是由它的<strong>内容</strong>决定的。==</p>
-<h3 id="FF30"><a href="#FF30" class="headerlink" title="==FF30=="></a><strong>==FF30==</strong></h3><p>注意：Firefox30中，水平滚动条的宽度是17个像素。</p>
+<h3><strong>==FF30==</strong></h3>
+<p>注意：Firefox30中，水平滚动条的宽度是17个像素。</p>
 <blockquote>
-<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">clientHeight = body.padding + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
-<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.offsetHeight + body.margin;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度;</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight</div></pre></td></tr></table></figure></p>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">clientHeight = body.padding + body.height(CSS设置或内容撑的);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.offsetHeight + body.margin;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度;</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>因此，只是获取窗口可见高度，在FF中得用documentElement.clientHeight，获取整个页面的高度，则应该用documentElement.scrollHeight。</p>
 <blockquote>
 <p>元素</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height；</div><div class="line"></div><div class="line">clientHeight = padding +height -水平滚动条的高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height；</div><div class="line"></div><div class="line">clientHeight = padding +height -水平滚动条的高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure></p>
 <p>==总结：从body, documentElement,元素的结果分析，FireFox认为scrollHeight的最小高度是clientHeight。==</p>
 <p>==offsetLeft = 元素border左上角到window视窗原点的距离 或 到offsetParent的border box顶部的距离。==</p>
-<h3 id="Chrome-39"><a href="#Chrome-39" class="headerlink" title="==Chrome 39=="></a><strong>==Chrome 39==</strong></h3><p>注意：Chrome39中，水平滚动条的宽度是17个像素。</p>
+<h3><strong>==Chrome 39==</strong></h3>
+<p>注意：Chrome39中，水平滚动条的宽度是17个像素。</p>
 <blockquote>
-<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding+ body.border + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">clientHeight= body.pdding + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">scrollHeight &gt;= offsetHeight; 并且scrollHeight &gt;= window窗口可见高度；</div></pre></td></tr></table></figure></p>
-<p>如果body没有内容(空的)：<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">body.offsetHeight == documentElement.offsetHeight;</div><div class="line"></div><div class="line">body.clientHeight ==documentElement.clientHeight;</div><div class="line"></div><div class="line">body.scrollHeight ==documentElement.scrollHeight;</div></pre></td></tr></table></figure></p>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding+ body.border + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">clientHeight= body.pdding + body.height（CSS设置或内容撑大）；</div><div class="line"></div><div class="line">scrollHeight &gt;= offsetHeight; 并且scrollHeight &gt;= window窗口可见高度；</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h4 id="而且以上属性的值都是浏览器的视窗高度。"><a href="#而且以上属性的值都是浏览器的视窗高度。" class="headerlink" title="而且以上属性的值都是浏览器的视窗高度。"></a>而且以上属性的值都是浏览器的视窗高度。</h4><blockquote>
-<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = scrollHeight = body.offsetHeight+ body.margin;</div><div class="line"></div><div class="line">clientHeight = window视窗可见高度;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>如果body没有内容(空的)：
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">body.offsetHeight == documentElement.offsetHeight;</div><div class="line"></div><div class="line">body.clientHeight ==documentElement.clientHeight;</div><div class="line"></div><div class="line">body.scrollHeight ==documentElement.scrollHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4>而且以上属性的值都是浏览器的视窗高度。</h4>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = scrollHeight = body.offsetHeight+ body.margin;</div><div class="line"></div><div class="line">clientHeight = window视窗可见高度;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==如果body内容过短，则documentElement的offsetHeight和scrollHeight将比clientHeight小。==</p>
 <p>==因此，只是获取页面窗口可视部分高度，在Chrome中用documentElement.clientHeight；获取整个页面内容最大高度（如果比窗口小，取窗口的高度），则应该用body.scrollHeight；获取页面内容的实际高度，应该使用body.offsetHeight()。==========</p>
 <blockquote>
-<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + border + height；</div><div class="line"></div><div class="line">clientHeight = padding + height -水平滚动条的高度；</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight；</div><div class="line"></div><div class="line">offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。</div></pre></td></tr></table></figure></p>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding + border + height；</div><div class="line"></div><div class="line">clientHeight = padding + height -水平滚动条的高度；</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight；</div><div class="line"></div><div class="line">offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="IE9"><a href="#IE9" class="headerlink" title="==IE9=="></a><strong>==IE9==</strong></h3><p>==注意：IE9中，滚动条的宽度是17个像素。==</p>
+<h3><strong>==IE9==</strong></h3>
+<p>==注意：IE9中，滚动条的宽度是17个像素。==</p>
 <blockquote>
-<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
-<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度;</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==因此，只是获取window窗口可见高度，在IE9中得用documentElement.clientHeight，获取整个页面内容的高度，则应该用documentElement.scrollHeight。==</p>
 <blockquote>
-<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - 滚动条的宽度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight;</div></pre></td></tr></table></figure></p>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - 滚动条的宽度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==总结：从body, documentElement,元素的结果分析，IE9认为scrollHeight的最小高度是clientHeight。==</p>
 <p>==从结果分析，IE9认为scrollHeight的最小高度是clientHeight。==</p>
-<h3 id="IE8"><a href="#IE8" class="headerlink" title="==IE8=="></a>==<strong>IE8</strong>==</h3><p>==注意：IE8中，滚动条的宽度是17个像素。==</p>
+<h3>==<strong>IE8</strong>==</h3>
+<p>==注意：IE8中，滚动条的宽度是17个像素。==</p>
 <blockquote>
-<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
-<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度 + body.border</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +body.border + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">clientHeight =  body.padding + body.height(CSS设置或内容撑大);</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight + 水平滚动条的高度 + body.border</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度</div><div class="line"></div><div class="line">scrollHeight &gt;= clientHeight并且scrollHeight &gt;= body.offsetHeight</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==因此，只是获取窗口可见高度，在IE8中得用documentElement.clientHeight，获取整个页面内容高度，则应该用documentElement.scrollHeight。==</p>
 <blockquote>
-<p>元素上<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height – 水平滚动条高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure></p>
+<p>元素上
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height – 水平滚动条高度。</div><div class="line"></div><div class="line">scrollHeight &gt;=clientHeight</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==从结果分析，IE8认为scrollHeight的最小高度是clientHeight。==</p>
 <p>==offsetLeft = 元素border左上角到画布原点的距离 或 到offsetParent的border box顶部的距离。==</p>
-<h3 id="IE7"><a href="#IE7" class="headerlink" title="==IE7=="></a><strong>==IE7==</strong></h3><p>==注意：IE7中，滚动条的宽度是17个像素。==</p>
+<h3><strong>==IE7==</strong></h3>
+<p>==注意：IE7中，滚动条的宽度是17个像素。==</p>
 <blockquote>
-<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border+ body.height(CSS设置或内容撑大)；</div><div class="line"></div><div class="line">clientHeight = body.height +body.padding – 水平滚动条高度；</div><div class="line"></div><div class="line">scrollHeight =  内容margin box的高度；</div></pre></td></tr></table></figure></p>
-<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight =window视窗可见高度;</div><div class="line"></div><div class="line">scrollHeight = body.offsetHeight+ body.margin;</div></pre></td></tr></table></figure></p>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding + body.border+ body.height(CSS设置或内容撑大)；</div><div class="line"></div><div class="line">clientHeight = body.height +body.padding – 水平滚动条高度；</div><div class="line"></div><div class="line">scrollHeight =  内容margin box的高度；</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = clientHeight =window视窗可见高度;</div><div class="line"></div><div class="line">scrollHeight = body.offsetHeight+ body.margin;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==因此，只是获取窗口可见部分高度，在IE7中得用documentElement.clientHeight，获取整个页面内容的大小，则用documentElement.scrollHeight。==</p>
 <blockquote>
-<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==从结果分析，IE7认为scrollHeight 可以小于clientHeight。==</p>
 <p>==offsetLeft = 元素border box左上角到父容器（不是offsetParent）的border box左上角的距离。==</p>
-<h3 id="IE6"><a href="#IE6" class="headerlink" title="==IE6=="></a><strong>==IE6==</strong></h3><blockquote>
-<p>body<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +内容margin box的高度。</div><div class="line"></div><div class="line">clientHeight = scrollHeight</div></pre></td></tr></table></figure></p>
-<p>documentElement<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight=画布高度，但offsetHeight&gt;= clientHeight</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度。</div><div class="line"></div><div class="line">scrollHeight = 内容的高度</div></pre></td></tr></table></figure></p>
+<h3><strong>==IE6==</strong></h3>
+<blockquote>
+<p>body
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = body.padding +内容margin box的高度。</div><div class="line"></div><div class="line">clientHeight = scrollHeight</div></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>documentElement
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight=画布高度，但offsetHeight&gt;= clientHeight</div><div class="line"></div><div class="line">clientHeight = window窗口可见高度。</div><div class="line"></div><div class="line">scrollHeight = 内容的高度</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==因此，只是获取页面窗口的大小，在IE6中得用documentElement.clientHeight，获取整个页面内容的大小，则应该用documentElement.offsetHeight。==</p>
 <blockquote>
-<p>元素<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
+<p>元素
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">offsetHeight = padding +border + height。</div><div class="line"></div><div class="line">clientHeight = padding +height - scrollbar.width。</div><div class="line"></div><div class="line">scrollHeight = padding + 内容margin box的高度</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>==从结果分析，IE6认为scrollHeight 可以小于clientHeight。==</p>
 <p>==offsetLeft = 元素border box左上角到父容器（不是offsetParent）的border box左上角的距离。==</p>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ul>
+<h2>结论</h2>
+<ul>
 <li>==IE6、IE7认为scrollHeight可以小于clientHeight==</li>
 <li>==IE8、IE9和Firefox认为scrollHeight&gt;=clientHeight==</li>
 <li>==取窗口可见部分高度，统一用documentElement.clientHeight即可==</li>
@@ -327,7 +378,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#clientHeight"><span class="nav-number">1.</span> <span class="nav-text">clientHeight</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#offsetHeight"><span class="nav-number">1.1.</span> <span class="nav-text">offsetHeight</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#scrollHeight"><span class="nav-number">1.2.</span> <span class="nav-text">scrollHeight</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FF30"><span class="nav-number"></span> <span class="nav-text">==FF30==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-39"><span class="nav-number"></span> <span class="nav-text">==Chrome 39==</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#而且以上属性的值都是浏览器的视窗高度。"><span class="nav-number">1.</span> <span class="nav-text">而且以上属性的值都是浏览器的视窗高度。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE9"><span class="nav-number"></span> <span class="nav-text">==IE9==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8"><span class="nav-number"></span> <span class="nav-text">==IE8==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE7"><span class="nav-number"></span> <span class="nav-text">==IE7==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6"><span class="nav-number"></span> <span class="nav-text">==IE6==</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number"></span> <span class="nav-text">结论</span></a>
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">clientHeight</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">offsetHeight</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">scrollHeight</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">==FF30==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">==Chrome 39==</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">而且以上属性的值都是浏览器的视窗高度。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">==IE9==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">==IE8==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">==IE7==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">==IE6==</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">结论</span></a>
     
     </div>
   </aside>
