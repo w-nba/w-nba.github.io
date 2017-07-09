@@ -12,25 +12,25 @@ var _hmt = _hmt || [];
 <head>
   <meta charset="utf-8">
   
-  <title>判断某个元素是否在屏幕可视区域内 | 石猴博客</title>
+  <title>settimeout 0 | 石猴博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="JavaScriptjQuery" />
+  <meta name="keywords" content="黑科技" />
   
   
   
   
-  <meta name="description" content="获取某个元素是否在页面可视区域内JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var win">
+  <meta name="description" content="setTimeout(function(){},0)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="判断某个元素是否在屏幕可视区域内">
-<meta property="og:url" content="http://stonemonkey.top/2017/07/01/元素可视/index.html">
+<meta property="og:title" content="setTimeout 0">
+<meta property="og:url" content="http://stonemonkey.top/2017/01/04/setTimeout/index.html">
 <meta property="og:site_name" content="石猴博客">
-<meta property="og:description" content="获取某个元素是否在页面可视区域内JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var win">
+<meta property="og:description" content="setTimeout(function(){},0)">
 <meta property="og:image" content="http://stonemonkey.top/postImg/2.jpg">
-<meta property="og:updated_time" content="2017-06-30T16:27:24.752Z">
+<meta property="og:updated_time" content="2017-07-09T13:06:48.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="判断某个元素是否在屏幕可视区域内">
-<meta name="twitter:description" content="获取某个元素是否在页面可视区域内JQuery$(function()&amp;#123;    var mainOffsetTop = $(&amp;quot;.body .blog ul li&amp;quot;).first().offset().top;    var mainHeight = $(&amp;quot;.body .blog ul li&amp;quot;).first().height();    var win">
+<meta name="twitter:title" content="setTimeout 0">
+<meta name="twitter:description" content="setTimeout(function(){},0)">
 <meta name="twitter:image" content="http://stonemonkey.top/postImg/2.jpg">
   
     <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
@@ -133,13 +133,13 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-元素可视" style="width: 660px; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-setTimeout" style="width: 660px; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/2.jpg" rel="gallery_cj4wqgy27000jj8akuaq6iq71">
+      <a class="article-gallery-img fancybox" href="/postImg/2.jpg" rel="gallery_cj4wqgy1b0002j8aky513oqll">
         <img src="/postImg/2.jpg" itemprop="image">
       </a>
     
@@ -151,7 +151,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      判断某个元素是否在屏幕可视区域内
+      setTimeout 0
     </h1>
   
 
@@ -159,8 +159,8 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	发表于 <a href="/2017/07/01/元素可视/" class="article-date">
-	  <time datetime="2017-06-30T16:15:28.000Z" itemprop="datePublished">七月 1, 2017</time>
+	发表于 <a href="/2017/01/04/setTimeout/" class="article-date">
+	  <time datetime="2017-01-04T12:30:38.000Z" itemprop="datePublished">一月 4, 2017</time>
 	</a>
 
       
@@ -171,28 +171,26 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody"  >
       
-        <h2 id="获取某个元素是否在页面可视区域内"><a href="#获取某个元素是否在页面可视区域内" class="headerlink" title="获取某个元素是否在页面可视区域内"></a>获取某个元素是否在页面可视区域内</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JQuery</div><div class="line">$(function()&#123;</div><div class="line">    var mainOffsetTop = $(&quot;.body .blog ul li&quot;).first().offset().top;</div><div class="line">    var mainHeight = $(&quot;.body .blog ul li&quot;).first().height();</div><div class="line">    var winHeight = $(window).height();</div><div class="line">    $(window).scroll(function()&#123;</div><div class="line">        var winScrollTop = $(window).scrollTop();</div><div class="line">        if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">            console.log(&quot;不在可视区域内&quot;);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(&quot;在可视区域内&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+        <p>setTimeout(function(){},0)</p>
 <a id="more"></a>
-<blockquote>
-<p>屏幕的100%高</p>
-<p>document.getElementById(“html”).clientHeight;</p>
-</blockquote>
-<h2 id="获取某个元素是否在页面可视区域内-1"><a href="#获取某个元素是否在页面可视区域内-1" class="headerlink" title="获取某个元素是否在页面可视区域内"></a>获取某个元素是否在页面可视区域内</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">JavaScript</div><div class="line"></div><div class="line">var yuansu = $(&quot;.body .blog ul li&quot;).first();</div><div class="line">var mainOffsetTop = yuansu.offsetTop;</div><div class="line">var mainHeight = yuansu.style.height;</div><div class="line">var winHeight = window.clietHeight;</div><div class="line">document.body.onscroll = function()&#123;</div><div class="line">    var winScrollTop = document.body.scrollTop;</div><div class="line">    if(winScrollTop &gt; mainOffsetTop + mainHeight || winScrollTop &lt;　mainOffsetTop - winHeight)&#123;</div><div class="line">        console.log(&quot;不在可视区域内&quot;);</div><div class="line">    &#125;else&#123;</div><div class="line">        console.log(&quot;在可视区域内&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>调用 setTimeout 函数会在一个时间段过去后在队列中添加一个消息。这个时间段作为函数的第二个参数被传入。如果队列中没有其它消息，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少的时间 而非确切的时间。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">(function () &#123;</div><div class="line"></div><div class="line">  console.log(&apos;this is the start&apos;);</div><div class="line"></div><div class="line">  setTimeout(function cb() &#123;</div><div class="line">    console.log(&apos;this is a msg from call back&apos;);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  console.log(&apos;this is just a message&apos;);</div><div class="line"></div><div class="line">  setTimeout(function cb1() &#123;</div><div class="line">    console.log(&apos;this is a msg from call back1&apos;);</div><div class="line">  &#125;, 0);</div><div class="line"></div><div class="line">  console.log(&apos;this is the  end&apos;);</div><div class="line"></div><div class="line">&#125;)();</div><div class="line"></div><div class="line">// &quot;this is the start&quot;</div><div class="line">// &quot;this is just a message&quot;</div><div class="line">// &quot;this is the end&quot;</div><div class="line">// &quot;this is a msg from call back&quot;</div><div class="line">// &quot;this is a msg from call back1&quot;</div></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>, <a class="article-category-link" href="/categories/JavaScript/jQuery/">jQuery</a>
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
 
       
         
 	<div id="comment">
-		<div id="SOHUCS" sid="判断某个元素是否在屏幕可视区域内" ></div> 
+		<div id="SOHUCS" sid="setTimeout 0" ></div> 
 		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript">
 			(function() {
@@ -221,11 +219,15 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-  
-    <a href="/2017/05/22/clientHeight和offsetHeight和scrollHeight/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">clientHeight和offsetHeight和scrollHeight的区别</div>
+    <a href="/2017/01/11/scrollbar/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          自定义滚动条
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -238,7 +240,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取某个元素是否在页面可视区域内"><span class="nav-number">1.</span> <span class="nav-text">获取某个元素是否在页面可视区域内</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取某个元素是否在页面可视区域内-1"><span class="nav-number">2.</span> <span class="nav-text">获取某个元素是否在页面可视区域内</span></a></li></ol>
+      <ol class="nav">无</ol>
     
     </div>
   </aside>
