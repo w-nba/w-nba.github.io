@@ -20,20 +20,17 @@ var _hmt = _hmt || [];
   
   
   
-  <meta name="description" content="自定义滚动条样式
-::-webkit-scrollbar 滚动条整体部分::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块">
+  <meta name="description" content="自定义滚动条样式::-webkit-scrollbar 滚动条整体部分::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自定义滚动条">
 <meta property="og:url" content="http://stonemonkey.top/2017/01/11/scrollbar/index.html">
 <meta property="og:site_name" content="石猴博客">
-<meta property="og:description" content="自定义滚动条样式
-::-webkit-scrollbar 滚动条整体部分::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块">
+<meta property="og:description" content="自定义滚动条样式::-webkit-scrollbar 滚动条整体部分::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的">
 <meta property="og:image" content="http://stonemonkey.top/postImg/2.jpg">
 <meta property="og:updated_time" content="2017-07-09T13:03:25.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="自定义滚动条">
-<meta name="twitter:description" content="自定义滚动条样式
-::-webkit-scrollbar 滚动条整体部分::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块">
+<meta name="twitter:description" content="自定义滚动条样式::-webkit-scrollbar 滚动条整体部分::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的">
 <meta name="twitter:image" content="http://stonemonkey.top/postImg/2.jpg">
   
     <link rel="alternate" href="/atom.xml" title="石猴博客" type="application/atom+xml">
@@ -142,7 +139,7 @@ var themeMenus = {};
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/postImg/2.jpg" rel="gallery_cj4wqs1pi0003ysakqhwqtcps">
+      <a class="article-gallery-img fancybox" href="/postImg/2.jpg" rel="gallery_cj4wqtamh0007wgaky6mzejcr">
         <img src="/postImg/2.jpg" itemprop="image">
       </a>
     
@@ -174,14 +171,10 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody"  >
       
-        <h2>自定义滚动条样式</h2>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">::-webkit-scrollbar 滚动条整体部分</div><div class="line">::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）</div><div class="line">::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）</div><div class="line">::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置。</div><div class="line">::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）</div><div class="line">::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处</div><div class="line">::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件</div></pre></td></tr></table></figure></p>
-<p>&lt;!-- more --&gt;</p>
-<h3>基础设置</h3>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/</div><div class="line">::-webkit-scrollbar</div><div class="line">&#123;</div><div class="line">    width: 16px;</div><div class="line">    height: 16px;</div><div class="line">    background-color: #F5F5F5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*定义滚动条轨道 内阴影+圆角*/</div><div class="line">::-webkit-scrollbar-track</div><div class="line">&#123;</div><div class="line">    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);</div><div class="line">    border-radius: 10px;</div><div class="line">    background-color: #F5F5F5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*定义滑块 内阴影+圆角*/</div><div class="line">::-webkit-scrollbar-thumb</div><div class="line">&#123;</div><div class="line">    border-radius: 10px;</div><div class="line">    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);</div><div class="line">    background-color: #555;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3>详细设置</h3>
-<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">:horizontal</div><div class="line">//horizontal伪类适用于任何水平方向上的滚动条</div><div class="line"></div><div class="line">:vertical</div><div class="line">//vertical伪类适用于任何垂直方向的滚动条</div><div class="line"></div><div class="line">:decrement</div><div class="line">//decrement伪类适用于按钮和轨道碎片。表示递减的按钮或轨道碎片，例如可以使区域向上或者向右移动的区域和按钮</div><div class="line"></div><div class="line">:increment</div><div class="line">//increment伪类适用于按钮和轨道碎片。表示递增的按钮或轨道碎片，例如可以使区域向下或者向左移动的区域和按钮</div><div class="line"></div><div class="line">:start</div><div class="line">//start伪类适用于按钮和轨道碎片。表示对象（按钮 轨道碎片）是否放在滑块的前面</div><div class="line"></div><div class="line">:end</div><div class="line">//end伪类适用于按钮和轨道碎片。表示对象（按钮 轨道碎片）是否放在滑块的后面</div><div class="line"></div><div class="line">:double-button</div><div class="line">//double-button伪类适用于按钮和轨道碎片。判断轨道结束的位置是否是一对按钮。也就是轨道碎片紧挨着一对在一起的按钮。</div><div class="line"></div><div class="line">:single-button</div><div class="line">//single-button伪类适用于按钮和轨道碎片。判断轨道结束的位置是否是一个按钮。也就是轨道碎片紧挨着一个单独的按钮。</div><div class="line"></div><div class="line">:no-button</div><div class="line">no-button伪类表示轨道结束的位置没有按钮。</div><div class="line"></div><div class="line">:corner-present</div><div class="line">//corner-present伪类表示滚动条的角落是否存在。</div><div class="line"></div><div class="line">:window-inactive</div><div class="line">//适用于所有滚动条，表示包含滚动条的区域，焦点不在该窗口的时候。</div><div class="line"></div><div class="line">::-webkit-scrollbar-track-piece:start &#123;</div><div class="line">/*滚动条上半边或左半边*/</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-thumb:window-inactive &#123;</div><div class="line">/*当焦点不在当前区域滑块的状态*/</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-button:horizontal:decrement:hover &#123;</div><div class="line">/*当鼠标在水平滚动条下面的按钮上的状态*/</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+        <h2 id="自定义滚动条样式"><a href="#自定义滚动条样式" class="headerlink" title="自定义滚动条样式"></a>自定义滚动条样式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">::-webkit-scrollbar 滚动条整体部分</div><div class="line">::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）</div><div class="line">::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）</div><div class="line">::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置。</div><div class="line">::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）</div><div class="line">::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处</div><div class="line">::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/</div><div class="line">::-webkit-scrollbar</div><div class="line">&#123;</div><div class="line">    width: 16px;</div><div class="line">    height: 16px;</div><div class="line">    background-color: #F5F5F5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*定义滚动条轨道 内阴影+圆角*/</div><div class="line">::-webkit-scrollbar-track</div><div class="line">&#123;</div><div class="line">    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);</div><div class="line">    border-radius: 10px;</div><div class="line">    background-color: #F5F5F5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*定义滑块 内阴影+圆角*/</div><div class="line">::-webkit-scrollbar-thumb</div><div class="line">&#123;</div><div class="line">    border-radius: 10px;</div><div class="line">    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);</div><div class="line">    background-color: #555;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="详细设置"><a href="#详细设置" class="headerlink" title="详细设置"></a>详细设置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">:horizontal</div><div class="line">//horizontal伪类适用于任何水平方向上的滚动条</div><div class="line"></div><div class="line">:vertical</div><div class="line">//vertical伪类适用于任何垂直方向的滚动条</div><div class="line"></div><div class="line">:decrement</div><div class="line">//decrement伪类适用于按钮和轨道碎片。表示递减的按钮或轨道碎片，例如可以使区域向上或者向右移动的区域和按钮</div><div class="line"></div><div class="line">:increment</div><div class="line">//increment伪类适用于按钮和轨道碎片。表示递增的按钮或轨道碎片，例如可以使区域向下或者向左移动的区域和按钮</div><div class="line"></div><div class="line">:start</div><div class="line">//start伪类适用于按钮和轨道碎片。表示对象（按钮 轨道碎片）是否放在滑块的前面</div><div class="line"></div><div class="line">:end</div><div class="line">//end伪类适用于按钮和轨道碎片。表示对象（按钮 轨道碎片）是否放在滑块的后面</div><div class="line"></div><div class="line">:double-button</div><div class="line">//double-button伪类适用于按钮和轨道碎片。判断轨道结束的位置是否是一对按钮。也就是轨道碎片紧挨着一对在一起的按钮。</div><div class="line"></div><div class="line">:single-button</div><div class="line">//single-button伪类适用于按钮和轨道碎片。判断轨道结束的位置是否是一个按钮。也就是轨道碎片紧挨着一个单独的按钮。</div><div class="line"></div><div class="line">:no-button</div><div class="line">no-button伪类表示轨道结束的位置没有按钮。</div><div class="line"></div><div class="line">:corner-present</div><div class="line">//corner-present伪类表示滚动条的角落是否存在。</div><div class="line"></div><div class="line">:window-inactive</div><div class="line">//适用于所有滚动条，表示包含滚动条的区域，焦点不在该窗口的时候。</div><div class="line"></div><div class="line">::-webkit-scrollbar-track-piece:start &#123;</div><div class="line">/*滚动条上半边或左半边*/</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-thumb:window-inactive &#123;</div><div class="line">/*当焦点不在当前区域滑块的状态*/</div><div class="line">&#125;</div><div class="line"></div><div class="line">::-webkit-scrollbar-button:horizontal:decrement:hover &#123;</div><div class="line">/*当鼠标在水平滚动条下面的按钮上的状态*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -251,7 +244,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">自定义滚动条样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">详细设置</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义滚动条样式"><span class="nav-number">1.</span> <span class="nav-text">自定义滚动条样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础设置"><span class="nav-number">1.1.</span> <span class="nav-text">基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详细设置"><span class="nav-number">1.2.</span> <span class="nav-text">详细设置</span></a></li></ol></li></ol>
     
     </div>
   </aside>
